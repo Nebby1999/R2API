@@ -1,123 +1,115 @@
-﻿using RoR2.ContentManagement;
+﻿using R2API.ScriptableObjects;
+using RoR2.ContentManagement;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using R2API.Utils;
+using R2API.AutoVersionGen;
 
 namespace R2API.ContentManagement;
 
-internal class R2APIGenericContentPack : IContentPackProvider
+#pragma warning disable CS0436 // Type conflicts with imported type
+[AutoVersion]
+#pragma warning restore CS0436 // Type conflicts with imported type
+public static partial class R2APIContentManagement
 {
+    public const string PluginGUID = R2API.PluginGUID + ".content_management";
+    public const string PluginName = R2API.PluginName + ".ContentManagement";
 
-    internal R2APIGenericContentPack(ContentPack finalizedContentPack)
+    private static Dictionary<string, (ContentPack, IContentPackProvider)> _identifierToProvider = new Dictionary<string, (ContentPack, IContentPackProvider)>();
+    public static IContentPackProvider CreateContentPackProvider(R2APISerializableContentPack r2apiSerializableContentPack)
     {
-        contentPack = finalizedContentPack;
-    }
-    public string identifier => contentPack.identifier;
+        var identifier = r2apiSerializableContentPack.name;
+        if(_identifierToProvider.ContainsKey(identifier))
+        {
+            //Log something
+        }
 
-    private ContentPack contentPack;
+        var contentPack = r2apiSerializableContentPack.GetOrCreateContentPack();
+        var provider = new ContentProvider
+        {
+            contentPack = contentPack
+        };
 
-    private bool logged = false;
-
-    public IEnumerator FinalizeAsync(FinalizeAsyncArgs args)
-    {
-        LogContentsFromContentPack();
-        args.ReportProgress(1f);
-        yield break;
-    }
-
-    public IEnumerator GenerateContentPackAsync(GetContentPackAsyncArgs args)
-    {
-        ContentPack.Copy(contentPack, args.output);
-        args.ReportProgress(1f);
-        yield break;
+        _identifierToProvider[identifier] = (contentPack, provider);
+        return provider;
     }
 
-    public IEnumerator LoadStaticContentAsync(LoadStaticContentAsyncArgs args)
+    public static IContentPackProvider CreateContentPackProvider(ContentPack contentPack)
     {
-        args.ReportProgress(1f);
-        yield break;
-    }
-    private void LogContentsFromContentPack()
-    {
-        if (logged)
-            return;
+        var identifier = contentPack.identifier;
+        if (_identifierToProvider.ContainsKey(identifier))
+        {
+            //Log something
+        }
 
-        logged = true;
-        List<string> log = new List<string>();
-        log.Add($"Content added from {contentPack.identifier}:");
-        log.AddRange(contentPack.bodyPrefabs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.masterPrefabs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.projectilePrefabs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.gameModePrefabs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.networkedObjectPrefabs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.skillDefs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.skillFamilies.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.sceneDefs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.itemDefs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.itemTierDefs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.itemRelationshipProviders.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.itemRelationshipTypes.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.equipmentDefs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.buffDefs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.eliteDefs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.unlockableDefs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.survivorDefs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.artifactDefs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.effectDefs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.surfaceDefs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.networkSoundEventDefs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.musicTrackDefs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.gameEndingDefs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.entityStateConfigurations.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.entityStateTypes.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.expansionDefs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.entitlementDefs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        log.AddRange(contentPack.miscPickupDefs.assetInfos.Select(ai => $"{ai.assetName} ({ai.asset.GetType().Name})"));
-        ContentManagementPlugin.Logger.LogDebug(string.Join("\n", log));
+        var provider = new ContentProvider
+        {
+            contentPack = contentPack
+        };
+        _identifierToProvider[identifier] = (contentPack, provider);
+        return provider;
     }
-}
-internal class R2APIContentPackProvider
-{
-    internal static Action WhenAddingContentPacks;
+
+    public static IContentPackProvider CreateContentPackProvider(string identifier, out ContentPack contentPack)
+    {
+        if (_identifierToProvider.ContainsKey(identifier))
+        {
+            //Log something
+        }
+
+        contentPack = new ContentPack();
+        contentPack.identifier = identifier;
+        var provider = new ContentProvider
+        {
+            contentPack = contentPack
+        };
+        _identifierToProvider[identifier] = (contentPack, provider);
+        return provider;
+    }
+
 
     internal static void Init()
     {
-        ContentManager.collectContentPackProviders += AddCustomContent;
+        ContentManager.collectContentPackProviders += ContentManager_collectContentPackProviders;
     }
 
-    private static void AddCustomContent(ContentManager.AddContentPackProviderDelegate addContentPackProvider)
+    private static void ContentManager_collectContentPackProviders(ContentManager.AddContentPackProviderDelegate addContentPackProvider)
     {
-        if (WhenAddingContentPacks != null)
+        foreach(var kvp in _identifierToProvider)
         {
-            foreach (Action @event in WhenAddingContentPacks.GetInvocationList())
-            {
-                try
-                {
-                    @event();
-                }
-                catch (Exception e)
-                {
-                    ContentManagementPlugin.Logger.LogError(e);
-                }
-            }
+            string identifier = kvp.Key;
+            IContentPackProvider provider = kvp.Value.Item2;
+
+            // Log adding i guess
+
+            addContentPackProvider(provider);
+        }
+    }
+
+    internal class ContentProvider : IContentPackProvider
+    {
+        public string identifier => contentPack.identifier;
+        public ContentPack contentPack;
+
+        public IEnumerator FinalizeAsync(FinalizeAsyncArgs args)
+        {
+            args.ReportProgress(1f);
+            yield break;
         }
 
-        R2APIContentManager.CreateContentPacks();
-
-        foreach (ManagedReadOnlyContentPack managedReadOnlyContentPack in R2APIContentManager.ManagedContentPacks)
+        public IEnumerator GenerateContentPackAsync(GetContentPackAsyncArgs args)
         {
-            if (managedReadOnlyContentPack.HasAutoCreatedIContentPackProvider)
-            {
-                try
-                {
-                    addContentPackProvider(managedReadOnlyContentPack.contentPackProvider);
-                }
-                catch (Exception e)
-                {
-                    ContentManagementPlugin.Logger.LogError(e);
-                }
-            }
+            args.ReportProgress(1f);
+            ContentPack.Copy(contentPack, args.output);
+            yield break;
+        }
+
+        public IEnumerator LoadStaticContentAsync(LoadStaticContentAsyncArgs args)
+        {
+            args.ReportProgress(1f);
+            yield break;
         }
     }
 }

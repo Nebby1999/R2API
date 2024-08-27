@@ -1,4 +1,5 @@
 ﻿using EntityStates;
+using HG;
 using RoR2;
 using RoR2.ContentManagement;
 using RoR2.EntitlementManagement;
@@ -17,83 +18,105 @@ public class R2APISerializableContentPack : ScriptableObject
 
     #region Prefabs
     [Header("Prefabs")]
-    [Tooltip("Prefabs with a CharacterBody component")]
-    public GameObject[] bodyPrefabs = Array.Empty<GameObject>();
+    [SerializeField, Tooltip("Prefabs with a CharacterBody component")]
+    private GameObject[] bodyPrefabs = Array.Empty<GameObject>();
 
-    [Tooltip("Prefabs with a CharacterMaster component")]
-    public GameObject[] masterPrefabs = Array.Empty<GameObject>();
+    [SerializeField, Tooltip("Prefabs with a CharacterMaster component")]
+    private GameObject[] masterPrefabs = Array.Empty<GameObject>();
 
-    [Tooltip("Prefabs with a ProjectileController component")]
-    public GameObject[] projectilePrefabs = Array.Empty<GameObject>();
+    [SerializeField, Tooltip("Prefabs with a ProjectileController component")]
+    private GameObject[] projectilePrefabs = Array.Empty<GameObject>();
 
-    [Tooltip("Prefabs with a component that inherits from \"Run\"")]
-    public GameObject[] gameModePrefabs = Array.Empty<GameObject>();
+    [SerializeField, Tooltip("Prefabs with a component that inherits from \"Run\"")]
+    private GameObject[] gameModePrefabs = Array.Empty<GameObject>();
 
-    [Tooltip("Prefabs with an EffectComponent component")]
-    public GameObject[] effectPrefabs = Array.Empty<GameObject>();
+    [SerializeField, Tooltip("Prefabs with an EffectComponent component")]
+    private GameObject[] effectPrefabs = Array.Empty<GameObject>();
 
-    [Tooltip("Prefabs with a NetworkIdentity component that dont apply to the arrays above")]
-    public GameObject[] networkedObjectPrefabs = Array.Empty<GameObject>();
+    [SerializeField, Tooltip("Prefabs with a NetworkIdentity component that dont apply to the arrays above")]
+    private GameObject[] networkedObjectPrefabs = Array.Empty<GameObject>();
     #endregion
 
     #region Scriptable Objects
     [Space(5)]
     [Header("Scriptable Objects")]
 
-    public SkillDef[] skillDefs = Array.Empty<SkillDef>();
+    [SerializeField]
+    private SkillDef[] skillDefs = Array.Empty<SkillDef>();
 
-    public SkillFamily[] skillFamilies = Array.Empty<SkillFamily>();
+    [SerializeField]
+    private SkillFamily[] skillFamilies = Array.Empty<SkillFamily>();
 
-    public SceneDef[] sceneDefs = Array.Empty<SceneDef>();
+    [SerializeField]
+    private SceneDef[] sceneDefs = Array.Empty<SceneDef>();
 
-    public ItemDef[] itemDefs = Array.Empty<ItemDef>();
+    [SerializeField]
+    private ItemDef[] itemDefs = Array.Empty<ItemDef>();
 
-    public ItemTierDef[] itemTierDefs = Array.Empty<ItemTierDef>();
+    [SerializeField]
+    private ItemTierDef[] itemTierDefs = Array.Empty<ItemTierDef>();
 
-    public ItemRelationshipProvider[] itemRelationshipProviders = Array.Empty<ItemRelationshipProvider>();
+    [SerializeField]
+    private ItemRelationshipProvider[] itemRelationshipProviders = Array.Empty<ItemRelationshipProvider>();
 
-    public ItemRelationshipType[] itemRelationshipTypes = Array.Empty<ItemRelationshipType>();
+    [SerializeField]
+    private ItemRelationshipType[] itemRelationshipTypes = Array.Empty<ItemRelationshipType>();
 
-    public EquipmentDef[] equipmentDefs = Array.Empty<EquipmentDef>();
+    [SerializeField]
+    private EquipmentDef[] equipmentDefs = Array.Empty<EquipmentDef>();
 
-    public BuffDef[] buffDefs = Array.Empty<BuffDef>();
+    [SerializeField]
+    private BuffDef[] buffDefs = Array.Empty<BuffDef>();
 
-    public EliteDef[] eliteDefs = Array.Empty<EliteDef>();
+    [SerializeField]
+    private EliteDef[] eliteDefs = Array.Empty<EliteDef>();
 
-    public UnlockableDef[] unlockableDefs = Array.Empty<UnlockableDef>();
+    [SerializeField]
+    private UnlockableDef[] unlockableDefs = Array.Empty<UnlockableDef>();
 
-    public SurvivorDef[] survivorDefs = Array.Empty<SurvivorDef>();
+    [SerializeField]
+    private SurvivorDef[] survivorDefs = Array.Empty<SurvivorDef>();
 
-    public ArtifactDef[] artifactDefs = Array.Empty<ArtifactDef>();
+    [SerializeField]
+    private ArtifactDef[] artifactDefs = Array.Empty<ArtifactDef>();
 
-    public SurfaceDef[] surfaceDefs = Array.Empty<SurfaceDef>();
+    [SerializeField]
+    private SurfaceDef[] surfaceDefs = Array.Empty<SurfaceDef>();
 
-    public NetworkSoundEventDef[] networkSoundEventDefs = Array.Empty<NetworkSoundEventDef>();
+    [SerializeField]
+    private NetworkSoundEventDef[] networkSoundEventDefs = Array.Empty<NetworkSoundEventDef>();
 
-    public MusicTrackDef[] musicTrackDefs = Array.Empty<MusicTrackDef>();
+    [SerializeField]
+    private MusicTrackDef[] musicTrackDefs = Array.Empty<MusicTrackDef>();
 
-    public GameEndingDef[] gameEndingDefs = Array.Empty<GameEndingDef>();
+    [SerializeField]
+    private GameEndingDef[] gameEndingDefs = Array.Empty<GameEndingDef>();
 
-    public MiscPickupDef[] miscPickupDefs = Array.Empty<MiscPickupDef>();
+    [SerializeField]
+    private MiscPickupDef[] miscPickupDefs = Array.Empty<MiscPickupDef>();
     #endregion
 
     #region Entity States
     [Space(5)]
     [Header("EntityState Related")]
 
-    public EntityStateConfiguration[] entityStateConfigurations = Array.Empty<EntityStateConfiguration>();
 
-    [Tooltip("Types inheriting from EntityState")]
-    public SerializableEntityStateType[] entityStateTypes = Array.Empty<SerializableEntityStateType>();
+    [SerializeField]
+    private EntityStateConfiguration[] entityStateConfigurations = Array.Empty<EntityStateConfiguration>();
+
+    [SerializeField, Tooltip("Types inheriting from EntityState")]
+    private SerializableEntityStateType[] entityStateTypes = Array.Empty<SerializableEntityStateType>();
     #endregion
 
     #region Expansion Related
     [Space(5)]
     [Header("Expansion Related")]
 
-    public ExpansionDef[] expansionDefs = Array.Empty<ExpansionDef>();
+    [SerializeField]
+    private ExpansionDef[] expansionDefs = Array.Empty<ExpansionDef>();
 
-    public EntitlementDef[] entitlementDefs = Array.Empty<EntitlementDef>();
+    [SerializeField]
+    private EntitlementDef[] entitlementDefs = Array.Empty<EntitlementDef>();
     #endregion
 
     private ContentPack contentPack;
@@ -103,6 +126,7 @@ public class R2APISerializableContentPack : ScriptableObject
         EnsureNoFieldsAreNull();
 
         ContentPack cp = new ContentPack();
+        cp.identifier = name;
         cp.bodyPrefabs.Add(bodyPrefabs);
         cp.masterPrefabs.Add(masterPrefabs);
         cp.projectilePrefabs.Add(projectilePrefabs);
