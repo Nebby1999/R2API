@@ -384,6 +384,41 @@ references:
   fullName.vb: R2API.AddressReferencedAssets.AddressReferencedAsset(Of T).LoadAssetAsyncCoroutine
   nameWithType: AddressReferencedAsset<T>.LoadAssetAsyncCoroutine
   nameWithType.vb: AddressReferencedAsset(Of T).LoadAssetAsyncCoroutine
+- uid: R2API.AddressReferencedAssets.AddressReferencedAsset`1.LoadAssetNow
+  name: LoadAssetNow()
+  href: api/R2API.AddressReferencedAssets.AddressReferencedAsset-1.html#R2API_AddressReferencedAssets_AddressReferencedAsset_1_LoadAssetNow
+  commentId: M:R2API.AddressReferencedAssets.AddressReferencedAsset`1.LoadAssetNow
+  fullName: R2API.AddressReferencedAssets.AddressReferencedAsset<T>.LoadAssetNow()
+  fullName.vb: R2API.AddressReferencedAssets.AddressReferencedAsset(Of T).LoadAssetNow()
+  nameWithType: AddressReferencedAsset<T>.LoadAssetNow()
+  nameWithType.vb: AddressReferencedAsset(Of T).LoadAssetNow()
+- uid: R2API.AddressReferencedAssets.AddressReferencedAsset`1.LoadAssetNow*
+  name: LoadAssetNow
+  href: api/R2API.AddressReferencedAssets.AddressReferencedAsset-1.html#R2API_AddressReferencedAssets_AddressReferencedAsset_1_LoadAssetNow_
+  commentId: Overload:R2API.AddressReferencedAssets.AddressReferencedAsset`1.LoadAssetNow
+  isSpec: "True"
+  fullName: R2API.AddressReferencedAssets.AddressReferencedAsset<T>.LoadAssetNow
+  fullName.vb: R2API.AddressReferencedAssets.AddressReferencedAsset(Of T).LoadAssetNow
+  nameWithType: AddressReferencedAsset<T>.LoadAssetNow
+  nameWithType.vb: AddressReferencedAsset(Of T).LoadAssetNow
+- uid: R2API.AddressReferencedAssets.AddressReferencedAsset`1.LoadAssetNowCoroutine(System.Action{`0})
+  name: LoadAssetNowCoroutine(Action<T>)
+  href: api/R2API.AddressReferencedAssets.AddressReferencedAsset-1.html#R2API_AddressReferencedAssets_AddressReferencedAsset_1_LoadAssetNowCoroutine_System_Action__0__
+  commentId: M:R2API.AddressReferencedAssets.AddressReferencedAsset`1.LoadAssetNowCoroutine(System.Action{`0})
+  name.vb: LoadAssetNowCoroutine(Action(Of T))
+  fullName: R2API.AddressReferencedAssets.AddressReferencedAsset<T>.LoadAssetNowCoroutine(System.Action<T>)
+  fullName.vb: R2API.AddressReferencedAssets.AddressReferencedAsset(Of T).LoadAssetNowCoroutine(System.Action(Of T))
+  nameWithType: AddressReferencedAsset<T>.LoadAssetNowCoroutine(Action<T>)
+  nameWithType.vb: AddressReferencedAsset(Of T).LoadAssetNowCoroutine(Action(Of T))
+- uid: R2API.AddressReferencedAssets.AddressReferencedAsset`1.LoadAssetNowCoroutine*
+  name: LoadAssetNowCoroutine
+  href: api/R2API.AddressReferencedAssets.AddressReferencedAsset-1.html#R2API_AddressReferencedAssets_AddressReferencedAsset_1_LoadAssetNowCoroutine_
+  commentId: Overload:R2API.AddressReferencedAssets.AddressReferencedAsset`1.LoadAssetNowCoroutine
+  isSpec: "True"
+  fullName: R2API.AddressReferencedAssets.AddressReferencedAsset<T>.LoadAssetNowCoroutine
+  fullName.vb: R2API.AddressReferencedAssets.AddressReferencedAsset(Of T).LoadAssetNowCoroutine
+  nameWithType: AddressReferencedAsset<T>.LoadAssetNowCoroutine
+  nameWithType.vb: AddressReferencedAsset(Of T).LoadAssetNowCoroutine
 - uid: R2API.AddressReferencedAssets.AddressReferencedAsset`1.LoadAsync
   name: LoadAsync()
   href: api/R2API.AddressReferencedAssets.AddressReferencedAsset-1.html#R2API_AddressReferencedAssets_AddressReferencedAsset_1_LoadAsync
@@ -469,41 +504,6 @@ references:
   fullName.vb: R2API.AddressReferencedAssets.AddressReferencedAsset(Of T).LoadFromAddressAsyncCoroutine
   nameWithType: AddressReferencedAsset<T>.LoadFromAddressAsyncCoroutine
   nameWithType.vb: AddressReferencedAsset(Of T).LoadFromAddressAsyncCoroutine
-- uid: R2API.AddressReferencedAssets.AddressReferencedAsset`1.ResolveAsset
-  name: ResolveAsset()
-  href: api/R2API.AddressReferencedAssets.AddressReferencedAsset-1.html#R2API_AddressReferencedAssets_AddressReferencedAsset_1_ResolveAsset
-  commentId: M:R2API.AddressReferencedAssets.AddressReferencedAsset`1.ResolveAsset
-  fullName: R2API.AddressReferencedAssets.AddressReferencedAsset<T>.ResolveAsset()
-  fullName.vb: R2API.AddressReferencedAssets.AddressReferencedAsset(Of T).ResolveAsset()
-  nameWithType: AddressReferencedAsset<T>.ResolveAsset()
-  nameWithType.vb: AddressReferencedAsset(Of T).ResolveAsset()
-- uid: R2API.AddressReferencedAssets.AddressReferencedAsset`1.ResolveAsset*
-  name: ResolveAsset
-  href: api/R2API.AddressReferencedAssets.AddressReferencedAsset-1.html#R2API_AddressReferencedAssets_AddressReferencedAsset_1_ResolveAsset_
-  commentId: Overload:R2API.AddressReferencedAssets.AddressReferencedAsset`1.ResolveAsset
-  isSpec: "True"
-  fullName: R2API.AddressReferencedAssets.AddressReferencedAsset<T>.ResolveAsset
-  fullName.vb: R2API.AddressReferencedAssets.AddressReferencedAsset(Of T).ResolveAsset
-  nameWithType: AddressReferencedAsset<T>.ResolveAsset
-  nameWithType.vb: AddressReferencedAsset(Of T).ResolveAsset
-- uid: R2API.AddressReferencedAssets.AddressReferencedAsset`1.ResolveAssetCoroutine(System.Action{`0})
-  name: ResolveAssetCoroutine(Action<T>)
-  href: api/R2API.AddressReferencedAssets.AddressReferencedAsset-1.html#R2API_AddressReferencedAssets_AddressReferencedAsset_1_ResolveAssetCoroutine_System_Action__0__
-  commentId: M:R2API.AddressReferencedAssets.AddressReferencedAsset`1.ResolveAssetCoroutine(System.Action{`0})
-  name.vb: ResolveAssetCoroutine(Action(Of T))
-  fullName: R2API.AddressReferencedAssets.AddressReferencedAsset<T>.ResolveAssetCoroutine(System.Action<T>)
-  fullName.vb: R2API.AddressReferencedAssets.AddressReferencedAsset(Of T).ResolveAssetCoroutine(System.Action(Of T))
-  nameWithType: AddressReferencedAsset<T>.ResolveAssetCoroutine(Action<T>)
-  nameWithType.vb: AddressReferencedAsset(Of T).ResolveAssetCoroutine(Action(Of T))
-- uid: R2API.AddressReferencedAssets.AddressReferencedAsset`1.ResolveAssetCoroutine*
-  name: ResolveAssetCoroutine
-  href: api/R2API.AddressReferencedAssets.AddressReferencedAsset-1.html#R2API_AddressReferencedAssets_AddressReferencedAsset_1_ResolveAssetCoroutine_
-  commentId: Overload:R2API.AddressReferencedAssets.AddressReferencedAsset`1.ResolveAssetCoroutine
-  isSpec: "True"
-  fullName: R2API.AddressReferencedAssets.AddressReferencedAsset<T>.ResolveAssetCoroutine
-  fullName.vb: R2API.AddressReferencedAssets.AddressReferencedAsset(Of T).ResolveAssetCoroutine
-  nameWithType: AddressReferencedAsset<T>.ResolveAssetCoroutine
-  nameWithType.vb: AddressReferencedAsset(Of T).ResolveAssetCoroutine
 - uid: R2API.AddressReferencedAssets.AddressReferencedAsset`1.ToString
   name: ToString()
   href: api/R2API.AddressReferencedAssets.AddressReferencedAsset-1.html#R2API_AddressReferencedAssets_AddressReferencedAsset_1_ToString
