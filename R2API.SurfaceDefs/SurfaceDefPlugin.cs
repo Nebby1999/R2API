@@ -15,6 +15,6 @@ public sealed class SurfaceDefPlugin : BaseUnityPlugin
 
     private void OnDestroy()
     {
-        SurfaceDefBehaviour.UnsetHooks();
+        SurfaceBehaviorHandler.UnsetHooks();
     }
 }
