@@ -24,7 +24,7 @@ public class AddressReferencedExpansionDef : AddressReferencedAsset<ExpansionDef
 
     protected override IEnumerator LoadAsyncCoroutine()
     {
-        if(CanLoadFromCatalog)
+        if (CanLoadFromCatalog)
         {
             ExpansionDef expansionDef = ExpansionCatalog.expansionDefs.FirstOrDefault(ed => ed.name.Equals(Address, StringComparison.OrdinalIgnoreCase));
             if (expansionDef != null)
@@ -34,7 +34,7 @@ public class AddressReferencedExpansionDef : AddressReferencedAsset<ExpansionDef
             }
         }
         var subroutine = LoadFromAddressAsyncCoroutine();
-        while(subroutine.MoveNext())
+        while (subroutine.MoveNext())
         {
             yield return null;
         }
@@ -43,7 +43,7 @@ public class AddressReferencedExpansionDef : AddressReferencedAsset<ExpansionDef
     [Obsolete("Call LoadAsyncCoroutine instead")]
     protected override async Task LoadAsync()
     {
-        if(CanLoadFromCatalog)
+        if (CanLoadFromCatalog)
         {
             ExpansionDef expansionDef = ExpansionCatalog.expansionDefs.FirstOrDefault(ed => ed.name.Equals(Address, StringComparison.OrdinalIgnoreCase));
             if (expansionDef != null)
@@ -57,7 +57,7 @@ public class AddressReferencedExpansionDef : AddressReferencedAsset<ExpansionDef
 
     protected override void Load()
     {
-        if(CanLoadFromCatalog)
+        if (CanLoadFromCatalog)
         {
             ExpansionDef expansionDef = ExpansionCatalog.expansionDefs.FirstOrDefault(ed => ed.name.Equals(Address, StringComparison.OrdinalIgnoreCase));
             if (expansionDef != null)

@@ -1,4 +1,5 @@
-﻿using RoR2;
+﻿
+using RoR2;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -35,7 +36,7 @@ public class AddressReferencedEliteDef : AddressReferencedAsset<EliteDef>
             }
         }
         var subroutine = LoadFromAddressAsyncCoroutine();
-        while(subroutine.MoveNext())
+        while (subroutine.MoveNext())
         {
             yield return null;
         }
@@ -44,7 +45,7 @@ public class AddressReferencedEliteDef : AddressReferencedAsset<EliteDef>
     [Obsolete("Call LoadAsyncCoroutine instead")]
     protected override async Task LoadAsync()
     {
-        if(CanLoadFromCatalog)
+        if (CanLoadFromCatalog)
         {
             EliteDef def = EliteCatalog.eliteDefs.FirstOrDefault(x => x.name.Equals(Address, StringComparison.OrdinalIgnoreCase));
             if (def != null)
@@ -58,7 +59,7 @@ public class AddressReferencedEliteDef : AddressReferencedAsset<EliteDef>
 
     protected override void Load()
     {
-        if(CanLoadFromCatalog)
+        if (CanLoadFromCatalog)
         {
             EliteDef def = EliteCatalog.eliteDefs.FirstOrDefault(x => x.name.Equals(Address, StringComparison.OrdinalIgnoreCase));
             if (def != null)

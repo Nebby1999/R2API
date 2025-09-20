@@ -23,17 +23,17 @@ public class AddressReferencedBuffDef : AddressReferencedAsset<BuffDef>
 
     protected override IEnumerator LoadAsyncCoroutine()
     {
-        if(CanLoadFromCatalog)
+        if (CanLoadFromCatalog)
         {
             BuffIndex index = BuffCatalog.FindBuffIndex(Address);
-            if(index != BuffIndex.None)
+            if (index != BuffIndex.None)
             {
                 Asset = BuffCatalog.GetBuffDef(index);
                 yield break;
             }
         }
         var subroutine = LoadFromAddressAsyncCoroutine();
-        while(subroutine.MoveNext())
+        while (subroutine.MoveNext())
         {
             yield return null;
         }
@@ -42,7 +42,7 @@ public class AddressReferencedBuffDef : AddressReferencedAsset<BuffDef>
     [Obsolete("Call LoadAsyncCoroutine instead")]
     protected override async Task LoadAsync()
     {
-        if(CanLoadFromCatalog)
+        if (CanLoadFromCatalog)
         {
             BuffIndex index = BuffCatalog.FindBuffIndex(Address);
             if (index != BuffIndex.None)
@@ -56,7 +56,7 @@ public class AddressReferencedBuffDef : AddressReferencedAsset<BuffDef>
 
     protected override void Load()
     {
-        if(CanLoadFromCatalog)
+        if (CanLoadFromCatalog)
         {
             BuffIndex index = BuffCatalog.FindBuffIndex(Address);
             if (index != BuffIndex.None)

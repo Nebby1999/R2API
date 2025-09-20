@@ -34,7 +34,7 @@ public class AddressReferencedUnlockableDef : AddressReferencedAsset<UnlockableD
             }
         }
         var subroutine = LoadFromAddressAsyncCoroutine();
-        while(subroutine.MoveNext())
+        while (subroutine.MoveNext())
         {
             yield return null;
         }
@@ -43,7 +43,7 @@ public class AddressReferencedUnlockableDef : AddressReferencedAsset<UnlockableD
     [Obsolete("Call LoadAsyncCoroutine instead")]
     protected override async Task LoadAsync()
     {
-        if(CanLoadFromCatalog)
+        if (CanLoadFromCatalog)
         {
             UnlockableDef unlockable = UnlockableCatalog.GetUnlockableDef(Address);
             if (unlockable)

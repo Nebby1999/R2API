@@ -45,7 +45,11 @@ public class AddressReferencedAsset<T> : AddressReferencedAsset where T : UObjec
              * 
              * In other cases, we'll just load the asset immediatly.
              */
-            if(!_asset && !Initialized && CanLoadFromCatalog)
+
+            if (_asset)
+                return _asset;
+
+            if (!Initialized && CanLoadFromCatalog)
             {
                 string typeName = GetType().Name;
                 var stackTrace = new StackTrace();
@@ -54,15 +58,21 @@ public class AddressReferencedAsset<T> : AddressReferencedAsset where T : UObjec
                     $"\n Consider using AddressReferencedAssets.OnAddressReferencedAssetsLoaded for running code that depends on AddressableAssets! (Method: {method.DeclaringType.FullName}.{method.Name}()");
                 Load();
             }
-            else if(IsValidForLoadingWithAddress())
+            else if (IsValidForLoadingWithAddress())
             {
-                if(_AddressFailedToLoad)
+                if (_AddressFailedToLoad)
                 {
                     AddressablesPlugin.Logger.LogWarning($"Not trying to load {this} because it's address has already failed to load beforehand. Null will be returned.");
                 }
                 else
                 {
-                    LoadFromAddress();
+                    if(_asyncOperationHandle.IsValid())
+                    {
+                        _asset = _asyncOperationHandle.WaitForCompletion();
+                        return _asset;
+                    }
+                    Load();
+                    return _asset;
                 }
             }
 
@@ -125,12 +135,12 @@ public class AddressReferencedAsset<T> : AddressReferencedAsset where T : UObjec
             _AddressFailedToLoad = false;
 
             //Release the handle
-            if(_asyncOperationHandle.IsValid())
+            if (_asyncOperationHandle.IsValid())
             {
                 Addressables.Release(_asyncOperationHandle);
             }
 
-            if(RoR2Application.loadFinished)
+            if (RoR2Application.loadFinished)
             {
                 Load();
             }
@@ -157,7 +167,7 @@ public class AddressReferencedAsset<T> : AddressReferencedAsset where T : UObjec
     /// <br>Mainly used for Editor related scripts</br>
     /// </summary>
     public bool UseDirectReference => _useDirectReference;
-    [SerializeField,HideInInspector] private bool _useDirectReference;
+    [SerializeField, HideInInspector] private bool _useDirectReference;
 
     /// <summary>
     /// Wether this AddressReferencedAsset can load an Asset using the game's catalogues.
@@ -175,7 +185,7 @@ public class AddressReferencedAsset<T> : AddressReferencedAsset where T : UObjec
     [Obsolete("Call \"LoadAssetAsyncCoroutine()\" instead.")]
     protected sealed override async Task LoadAssetAsync()
     {
-        if(IsValidForLoadingWithAddress())
+        if (IsValidForLoadingWithAddress())
         {
             await LoadAsync();
         }
@@ -187,10 +197,10 @@ public class AddressReferencedAsset<T> : AddressReferencedAsset where T : UObjec
     /// <returns>A Coroutine, which can be awaited</returns>
     protected sealed override IEnumerator LoadAssetAsyncCoroutine()
     {
-        if(IsValidForLoadingWithAddress())
+        if (IsValidForLoadingWithAddress())
         {
             var coroutine = LoadAsyncCoroutine();
-            while(coroutine.MoveNext())
+            while (coroutine.MoveNext())
             {
                 yield return null;
             }
@@ -203,7 +213,7 @@ public class AddressReferencedAsset<T> : AddressReferencedAsset where T : UObjec
     /// <returns>The loaded asset, or null if no asset was found.</returns>
     public T LoadAssetNow()
     {
-        if(!AssetExists)
+        if (!AssetExists)
             Load();
 
         return Asset;
@@ -220,10 +230,10 @@ public class AddressReferencedAsset<T> : AddressReferencedAsset where T : UObjec
     /// <returns>Yield returns null until the asset is loaded, afterwards it returns </returns>
     public virtual IEnumerator LoadAssetNowCoroutine(Action<T> onLoaded)
     {
-        if(!AssetExists)
+        if (!AssetExists)
         {
             var loadCoroutine = LoadAsyncCoroutine();
-            while(loadCoroutine.MoveNext())
+            while (loadCoroutine.MoveNext())
             {
                 yield return null;
             }
@@ -248,7 +258,7 @@ public class AddressReferencedAsset<T> : AddressReferencedAsset where T : UObjec
     protected virtual IEnumerator LoadAsyncCoroutine()
     {
         var loadCoroutine = LoadFromAddressAsyncCoroutine();
-        while(loadCoroutine.MoveNext())
+        while (loadCoroutine.MoveNext())
         {
             yield return null;
         }
@@ -265,22 +275,27 @@ public class AddressReferencedAsset<T> : AddressReferencedAsset where T : UObjec
     /// </summary>
     protected IEnumerator LoadFromAddressAsyncCoroutine()
     {
+        if (addressesThatFailedToBeValidated.Contains(_address))
+            yield break;
+
         bool? result = null;
         IEnumerator<bool?> addressValidCoroutine = IsAdressValidAsync();
-        while(result != null && addressValidCoroutine.MoveNext())
+        while (result != null && addressValidCoroutine.MoveNext())
         {
             result = addressValidCoroutine.Current;
         }
 
         result ??= false;
-        if(result == false)
+        if (result == false)
         {
             AddressablesPlugin.Logger.LogWarning($"{this} failed to load from it's address because the address is either invalid, or malformed.");
+            addressesThatFailedToBeValidated.Add(_address);
             _AddressFailedToLoad = true;
+            yield break;
         }
 
         AsyncOperationHandle = Addressables.LoadAssetAsync<T>(_address);
-        while(!AsyncOperationHandle.IsDone)
+        while (!AsyncOperationHandle.IsDone)
         {
             yield return null;
         }
@@ -292,19 +307,21 @@ public class AddressReferencedAsset<T> : AddressReferencedAsset where T : UObjec
     {
         bool? result = null;
         IEnumerator<bool?> coroutine = IsAdressValidAsync();
-        while(result != null)
+        while (result != null)
         {
-            if(coroutine.MoveNext())
+            if (coroutine.MoveNext())
             {
                 result = coroutine.Current;
             }
             break;
         }
 
-        if(result == false)
+        if (result == false)
         {
             AddressablesPlugin.Logger.LogWarning($"{this} failed to load from it's address because the address is either invalid, or malformed.");
+            addressesThatFailedToBeValidated.Add(_address);
             _AddressFailedToLoad = true;
+            return;
         }
 
         AsyncOperationHandle = Addressables.LoadAssetAsync<T>(_address);
@@ -317,10 +334,11 @@ public class AddressReferencedAsset<T> : AddressReferencedAsset where T : UObjec
     /// </summary>
     protected void LoadFromAddress()
     {
-        if(!IsAddressValid())
+        if (!IsAddressValid())
         {
             AddressablesPlugin.Logger.LogWarning($"{this} failed to load from it's address because the address is either invalid, or malformed.");
             _AddressFailedToLoad = true;
+            addressesThatFailedToBeValidated.Add(_address);
             return;
         }
         AsyncOperationHandle = Addressables.LoadAssetAsync<T>(_address);
@@ -331,14 +349,13 @@ public class AddressReferencedAsset<T> : AddressReferencedAsset where T : UObjec
     {
         var location = Addressables.LoadResourceLocationsAsync(_address).WaitForCompletion();
 
-        AddressablesPlugin.Logger.LogFatal($"Location for address {Address} exists?: {location.Any()}");
         return location.Any();
     }
 
     private IEnumerator<bool?> IsAdressValidAsync()
     {
         var locationTask = Addressables.LoadResourceLocationsAsync(_address);
-        while(!locationTask.IsDone)
+        while (!locationTask.IsDone)
         {
             yield return null;
         }
@@ -450,6 +467,7 @@ public class AddressReferencedAsset<T> : AddressReferencedAsset where T : UObjec
 /// </summary>
 public abstract class AddressReferencedAsset : IDisposable
 {
+    protected static readonly HashSet<string> addressesThatFailedToBeValidated = new HashSet<string>();
     protected static readonly HashSet<AddressReferencedAsset> instances = new();
 
     /// <summary>
@@ -464,10 +482,7 @@ public abstract class AddressReferencedAsset : IDisposable
     public static bool Initialized { get => _initialized; }
     private static bool _initialized;
 
-    /// <summary>
-    /// An event that gets invoked when all the AddressReferencedAssets have been loaded.
-    /// </summary>
-
+    [Obsolete("This event no longer runs after anything in particular, it gets invoked on RoR2Application.onLoad for backwards compatibility.")]
     public static event Action OnAddressReferencedAssetsLoaded;
 
     /// <summary>
@@ -480,13 +495,16 @@ public abstract class AddressReferencedAsset : IDisposable
     /// </summary>
     protected void SetHooks()
     {
-        if(RoR2Application.loadFinished)
+        if (RoR2Application.loadFinished)
         {
-            StartCoroutineOnLoad();
+            CallInitialized();
+            //StartCoroutineOnLoad();
             return;
         }
-        RoR2Application.onLoad -= StartCoroutineOnLoad;
-        RoR2Application.onLoad += StartCoroutineOnLoad;
+        RoR2Application.onLoad -= CallInitialized;
+        RoR2Application.onLoad += CallInitialized;
+        //RoR2Application.onLoad -= StartCoroutineOnLoad;
+        //RoR2Application.onLoad += StartCoroutineOnLoad;
     }
 
     /// <summary>
@@ -495,7 +513,18 @@ public abstract class AddressReferencedAsset : IDisposable
     protected void UnsetHooks()
     {
         if (!RoR2Application.loadFinished)
-            RoR2Application.onLoad -= StartCoroutineOnLoad;
+            RoR2Application.onLoad -= CallInitialized;
+            //RoR2Application.onLoad -= StartCoroutineOnLoad;
+    }
+
+    private void CallInitialized()
+    {
+        if (_initialized)
+            return;
+
+        AddressablesPlugin.Logger.LogMessage("AddressReferencedAssets initialized");
+        _initialized = true;
+        OnAddressReferencedAssetsLoaded?.Invoke();
     }
 
     private void StartCoroutineOnLoad()
@@ -506,9 +535,9 @@ public abstract class AddressReferencedAsset : IDisposable
     private static IEnumerator LoadReferencesAsync()
     {
         ParallelCoroutine parallelCoroutine = new ParallelCoroutine();
-        foreach(var instance in instances)
+        foreach (var instance in instances)
         {
-            if(instance.BoxedAsset)
+            if (instance.BoxedAsset)
             {
                 continue;
             }
@@ -516,16 +545,16 @@ public abstract class AddressReferencedAsset : IDisposable
             parallelCoroutine.Add(instance.LoadAssetAsyncCoroutine());
         }
 
-        while(parallelCoroutine.MoveNext())
+        while (parallelCoroutine.MoveNext())
         {
             yield return null;
         }
 
         //Backwards compat for the task version.
         List<Task> tasks = new List<Task>();
-        foreach(AddressReferencedAsset instance in instances)
+        foreach (AddressReferencedAsset instance in instances)
         {
-            if(instance.BoxedAsset)
+            if (instance.BoxedAsset)
             {
                 continue;
             }
@@ -534,7 +563,7 @@ public abstract class AddressReferencedAsset : IDisposable
         }
 
         var supertask = Task.WhenAll(tasks);
-        while(!supertask.IsCompleted)
+        while (!supertask.IsCompleted)
         {
             yield return null;
         }
@@ -557,7 +586,7 @@ public abstract class AddressReferencedAsset : IDisposable
     /// </summary>
     public virtual void Dispose()
     {
-        if(AsyncOperationHandle.IsValid())
+        if (AsyncOperationHandle.IsValid())
         {
             Addressables.Release(AsyncOperationHandle);
         }

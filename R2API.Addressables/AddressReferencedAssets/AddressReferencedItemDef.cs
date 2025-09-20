@@ -33,7 +33,7 @@ public class AddressReferencedItemDef : AddressReferencedAsset<ItemDef>
             }
         }
         var subroutine = LoadFromAddressAsyncCoroutine();
-        while(subroutine.MoveNext())
+        while (subroutine.MoveNext())
         {
             yield return null;
         }
@@ -42,7 +42,7 @@ public class AddressReferencedItemDef : AddressReferencedAsset<ItemDef>
     [Obsolete("Call LoadAsyncCoroutine instead")]
     protected override async Task LoadAsync()
     {
-        if(CanLoadFromCatalog)
+        if (CanLoadFromCatalog)
         {
             ItemIndex index = ItemCatalog.FindItemIndex(Address);
             if (index != ItemIndex.None)

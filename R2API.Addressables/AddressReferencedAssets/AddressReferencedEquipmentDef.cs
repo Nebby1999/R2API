@@ -34,7 +34,7 @@ public class AddressReferencedEquipmentDef : AddressReferencedAsset<EquipmentDef
             }
         }
         var subroutine = LoadFromAddressAsyncCoroutine();
-        while(subroutine.MoveNext())
+        while (subroutine.MoveNext())
         {
             yield return null;
         }
@@ -43,7 +43,7 @@ public class AddressReferencedEquipmentDef : AddressReferencedAsset<EquipmentDef
     [Obsolete("Call LoadAsyncCoroutine instead.")]
     protected override async Task LoadAsync()
     {
-        if(CanLoadFromCatalog)
+        if (CanLoadFromCatalog)
         {
             EquipmentIndex index = EquipmentCatalog.FindEquipmentIndex(Address);
             if (index != EquipmentIndex.None)
@@ -57,7 +57,7 @@ public class AddressReferencedEquipmentDef : AddressReferencedAsset<EquipmentDef
 
     protected override void Load()
     {
-        if(CanLoadFromCatalog)
+        if (CanLoadFromCatalog)
         {
             EquipmentIndex index = EquipmentCatalog.FindEquipmentIndex(Address);
             if (index != EquipmentIndex.None)
