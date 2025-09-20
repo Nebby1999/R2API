@@ -88,11 +88,22 @@ They can either be 1D or 2D.</p>
       <h4><a class="xref" href="R2API.Models.Condition.html">Condition</a></h4>
       <section><p>Condition that is used to determine if a transition must be taken.</p>
 </section>
+      <h4><a class="xref" href="R2API.Models.EntryTransition.html">EntryTransition</a></h4>
+      <section><p>EntryTransitions define when and how the state machine switch from one state to another.
+EntryTransition always originate from a StateMachine or a StateMachine entry.
+They do not define timing parameters.</p>
+</section>
       <h4><a class="xref" href="R2API.Models.ExistingLayer.html">ExistingLayer</a></h4>
-      <section><p>Changes to an existing layer in a RuntimeAnimationController</p>
+      <section><p>Changes to a layer.</p>
 </section>
       <h4><a class="xref" href="R2API.Models.ExistingState.html">ExistingState</a></h4>
-      <section><p>Changes to an existing state in a layer.</p>
+      <section><p>Changes to an existing state.</p>
+</section>
+      <h4><a class="xref" href="R2API.Models.ExistingStateMachine.html">ExistingStateMachine</a></h4>
+      <section><p>Changes to a state machine.</p>
+</section>
+      <h4><a class="xref" href="R2API.Models.Layer.html">Layer</a></h4>
+      <section><p>Information about a new layer</p>
 </section>
       <h4><a class="xref" href="R2API.Models.Parameter.html">Parameter</a></h4>
       <section><p>Used to communicate between scripting and the controller. Some parameters can be set in scripting and used by the controller,
@@ -103,6 +114,15 @@ while other parameters are based on Custom Curves in Animation Clips and can be 
 a Motion (AnimationClip or BlendTree) which will play while the character is
 in that state. When an event in the game triggers a state transition, the character
 will be left in a new state whose animation sequence will then take over.</p>
+</section>
+      <h4><a class="xref" href="R2API.Models.StateMachine.html">StateMachine</a></h4>
+      <section><p>A graph controlling the interaction of states. Each state references a motion.</p>
+</section>
+      <h4><a class="xref" href="R2API.Models.SyncedBehaviour.html">SyncedBehaviour</a></h4>
+      <section><p>Information about a behaviour for a state in Synced Layer</p>
+</section>
+      <h4><a class="xref" href="R2API.Models.SyncedMotion.html">SyncedMotion</a></h4>
+      <section><p>Information about a motion for a state in Synced Layer</p>
 </section>
       <h4><a class="xref" href="R2API.Models.Transition.html">Transition</a></h4>
       <section><p>Transitions define when and how the state machine switch from one state to another.
@@ -118,6 +138,9 @@ Structs
     <h3 id="enums">
 Enums
 </h3>
+      <h4><a class="xref" href="R2API.Models.AnimatorLayerBlendingMode.html">AnimatorLayerBlendingMode</a></h4>
+      <section><p>Specifies how the layer is blended with the previous layers.</p>
+</section>
       <h4><a class="xref" href="R2API.Models.BlendTreeType.html">BlendTreeType</a></h4>
       <section><p>The type of blending algorithm that the blend tree uses.</p>
 </section>
