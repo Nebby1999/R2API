@@ -6,12 +6,10 @@ using System.Collections.Generic;
 using System.Text;
 using UnityEngine.Networking;
 
+#pragma warning disable R2APISubmodulesAnalyzer // Public API Method is not enabling the hooks if needed.
 namespace R2API;
-internal static class NetworkingMessages
+public static partial class SurfaceBehaviorHandler
 {
-    /// <summary>
-    /// Adds a behaviour to the specified body on all machines.
-    /// </summary>
     public class AddOrEnableBehaviourMessage : INetMessage
     {
         public SurfaceDefIndex indexWeAreOn;
@@ -44,3 +42,4 @@ internal static class NetworkingMessages
         return (SurfaceDefIndex)reader.ReadInt32();
     }
 }
+#pragma warning restore R2APISubmodulesAnalyzer // Public API Method is not enabling the hooks if needed.

@@ -3,7 +3,7 @@ using BepInEx.Logging;
 
 namespace R2API;
 
-[BepInPlugin(SurfaceDefBehaviour.PluginGUID, SurfaceDefBehaviour.PluginName, SurfaceDefBehaviour.PluginVersion)]
+[BepInPlugin(SurfaceBehaviorHandler.PluginGUID, SurfaceBehaviorHandler.PluginName, SurfaceBehaviorHandler.PluginVersion)]
 public sealed class SurfaceDefPlugin : BaseUnityPlugin
 {
     internal static new ManualLogSource Logger { get; set; }

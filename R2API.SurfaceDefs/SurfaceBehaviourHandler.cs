@@ -19,6 +19,8 @@ namespace R2API;
  * Due to this, all the movement, including the surfaceDef handling, is handled on the CharacterMotor under authority, which for enemies its the server and for players its mostly the clients.
  * As a result, this class needs to handle its own networking via custom messages. In scenarios where the body is not player controlled we know its an enemy, therefore we need to send
  * a message to the clients. If the body is player controlled then we need to decide how to send the update to the other machines.
+ * 
+ * Turns out the "inLava" boolean of characterBody wasnt that jank at all, easiest form to do it if anything.
  */
 
 /// <summary>
@@ -31,7 +33,7 @@ public static partial class SurfaceBehaviorHandler
 {
     public const string PluginGUID = R2API.PluginGUID + ".surfacedefs";
     public const string PluginName = R2API.PluginName + ".SurfaceDefs";
-    private static Type[] _surfaceIndexToBehaviorType = Array.Empty<Type>();
+    private static Dictionary<SurfaceDefIndex, Type> _surfaceDefToBehaviourType = new();
 
     //While i'd like for there to be just one dictionary, CharacterMotor does not keep track of what surface its in, so we need to keep track of that ourselves. which explains the second dictionary.
     //Hopefully saving it as an enum will mean less memory consumed overall.
@@ -77,7 +79,6 @@ public static partial class SurfaceBehaviorHandler
         List<SurfaceBehavior.SurfaceDefAssociation> surfaceDefAssociations = new List<SurfaceBehavior.SurfaceDefAssociation>();
         HG.Reflection.SearchableAttribute.GetInstances(surfaceDefAssociations);
 
-        _surfaceIndexToBehaviorType = new Type[SurfaceDefCatalog.surfaceDefs.Length];
         Type surfaceBehaviorType = typeof(SurfaceBehavior);
         Type surfaceDefType = typeof(SurfaceDef);
         bool anyAdded = false;
@@ -109,7 +110,7 @@ public static partial class SurfaceBehaviorHandler
             if (surfaceDef.surfaceDefIndex < 0)
                 continue;
 
-            _surfaceIndexToBehaviorType[(int)surfaceDef.surfaceDefIndex] = type;
+            _surfaceDefToBehaviourType[surfaceDef.surfaceDefIndex] = type;
             anyAdded = true;
         }
 
@@ -152,79 +153,74 @@ public static partial class SurfaceBehaviorHandler
         }
     }
 
-    private static bool TryGetBehaviorType(SurfaceDef sd, out Type behaviorType)
-    {
-        behaviorType = _surfaceIndexToBehaviorType[(int)sd.surfaceDefIndex];
-        return !(behaviorType is null);
-    }
-
-    private static bool TryGetBehaviorType(SurfaceDefIndex sdi, out Type behaviorType)
-    {
-        behaviorType = _surfaceIndexToBehaviorType[(int)sdi];
-        return !(behaviorType is null);
-    }
-
+    /*
+     * When a body comes into contact with a surface the following things need to happen.
+     * Keep in mind that character movement happens _under authority_.
+     * 
+     * Authority side:
+     */
     private static void HandleSurfaceContact(CharacterBody body, SurfaceDef sd)
     {
+        if (!body || body.bodyIndex == BodyIndex.None)
+            return;
+
+        bool hasAuthority = body.hasAuthority;
+
+        //Only the authority machine can know what we've contacted technically. Networking will happen later.
+        if(!hasAuthority)
+        {
+            return;
+        }
+
+        //If a body isnt in this dictionary at this point, something is horribly wrong, as all bodies on awake should be added to this dictionary.
+        if(!_bodyToSurfaceBehaviourDictionary.TryGetValue(body, out var perBodyBehaviourDictionary))
+        {
+            return;
+        }
+
         //Some surfaces in the game have no surface def, we'll treat this as the body leaving the current surface.
         if(!sd)
         {
             HandleSurfaceExit(body);
+            return;
         }
 
-        if (!body || body.bodyIndex == BodyIndex.None)
-            return;
 
         SurfaceDefIndex incomingIndex = sd.surfaceDefIndex;
-        Type incomingBehaviourType = null;
-        Type activeBehaviour;
-        /*//If there is no surface to handle, hand it over to HandleSurfaceExit
-        if (sd is null) HandleSurfaceExit(body);
 
-        //If there is no body, return
-        if (body.bodyIndex == BodyIndex.None || !body)
+        //Do the two surfaces use the same behaviour? If so, we need to return.
+        Type incomingBehaviourType = _surfaceDefToBehaviourType.GetValueOrDefault(incomingIndex);
+        SurfaceDefIndex currentlyStandingIndex = _bodyToCurrentlyStandingIndex[body];
+        Type activeBehaviourType = _surfaceDefToBehaviourType.GetValueOrDefault(currentlyStandingIndex);
+
+        //Update the currently standing index.
+        _bodyToCurrentlyStandingIndex[body] = incomingIndex;
+        if (incomingBehaviourType == activeBehaviourType)
             return;
 
-        //If the incoming surface has the same behavior as the currently active surface, return
-        SurfaceDefIndex sdi = sd.surfaceDefIndex;
-        Type incoming;
-        bool incomingHasBehavior = TryGetBehaviorType(sdi, out incoming);
-        Type active = _bodyToActiveBehavior[body]?.GetType();
-        if (incoming == active)
-            return;
-
-        //Try to grab behavior of incoming surface. If it has no behavior, disable currently active behavior (if there is one) and return  
-        if (!incomingHasBehavior)
+        //If the incoming surface has no behaviour, we need to disable the currently active one. Nothing else needs to be done.
+        if (incomingBehaviourType == null)
         {
-            if (!(active is null))
+            if(perBodyBehaviourDictionary.TryGetValue(currentlyStandingIndex, out var surfaceDefBehaviour))
             {
-                _bodyToActiveBehavior[body].enabled = false;
-                _bodyToActiveBehavior[body] = null;
+                surfaceDefBehaviour.enabled = false;
+                //Send a message that we need to disable the currently standing index.
             }
             return;
         }
 
-        //Create new surface behavior if there isn't one on the body already
-        if (!_bodyToSurfaceBehaviourDictionary.ContainsKey(body))
-            _bodyToSurfaceBehaviourDictionary[body] = new Dictionary<SurfaceDefIndex, SurfaceBehavior>();
-
-        var bodySurfaceBehaviors = _bodyToSurfaceBehaviourDictionary[body];
-        SurfaceBehavior newBehavior;
-        if (bodySurfaceBehaviors.ContainsKey(sdi))
-            newBehavior = bodySurfaceBehaviors[sdi];
-        else
+        //Try get the new behaviour that needs to be enabled, if it doesnt exist, add it to the body.
+        SurfaceBehavior newBehaviour;
+        if(!perBodyBehaviourDictionary.TryGetValue(currentlyStandingIndex, out newBehaviour))
         {
-            newBehavior = (SurfaceBehavior)body.gameObject.AddComponent(_surfaceIndexToBehaviorType[(int)sdi]);
-            newBehavior.surfaceIndex = sdi;
-            newBehavior.body = body;
-            bodySurfaceBehaviors.Add(sdi, newBehavior);
+            newBehaviour = (SurfaceBehavior)body.gameObject.AddComponent(incomingBehaviourType);
+            newBehaviour.surfaceIndex = incomingIndex;
+            newBehaviour.body = body;
+            perBodyBehaviourDictionary.Add(currentlyStandingIndex, newBehaviour);
         }
 
-        //Replace current active behavior with the incoming behavior
-        if (!(active is null))
-            _bodyToActiveBehavior[body].enabled = false;
-        _bodyToActiveBehavior[body] = newBehavior;
-        newBehavior.enabled = true;*/
+        //Enable it, in case the new behaviour already existed.
+        newBehaviour.enabled = true;
     }
 
     private static void HandleSurfaceExit(CharacterBody body)
@@ -235,7 +231,7 @@ public static partial class SurfaceBehaviorHandler
 
         //Only run if the machine has authority on the body. networking happens after.
         bool hasAuthority = body.hasAuthority;
-        if(hasAuthority)
+        if(!hasAuthority)
         {
             return;
         }
