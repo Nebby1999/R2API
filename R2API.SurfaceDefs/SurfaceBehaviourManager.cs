@@ -15,23 +15,13 @@ using UnityEngine.Networking;
 
 namespace R2API;
 
-/*
- * This entire class is a bit fucky, but basically the concept of a SurfaceDefBehaviour, while useful, cannot really exist on its own. This is because for players movement is controlled by the 
- * Client machine, not the server. The client sends updates to the server on where it is.
- * Due to this, all the movement, including the surfaceDef handling, is handled on the CharacterMotor under authority, which for enemies its the server and for players its mostly the clients.
- * As a result, this class needs to handle its own networking via custom messages. In scenarios where the body is not player controlled we know its an enemy, therefore we need to send
- * a message to the clients. If the body is player controlled then we need to decide how to send the update to the other machines.
- * 
- * Turns out the "inLava" boolean of characterBody wasnt that jank at all, easiest form to do it if anything.
- */
-
 /// <summary>
-/// Class for the handler, you shouldn't use this directly.
+/// Class that manages the surface behaviours, you shouldn't use this directly and instead utilize <see cref="SurfaceBehaviour"/>
 /// </summary>
 #pragma warning disable CS0436 // Type conflicts with imported type
 [AutoVersion]
 #pragma warning restore CS0436 // Type conflicts with imported type
-public static partial class SurfaceBehaviourManager
+static partial class SurfaceBehaviourManager
 {
     public const string PluginGUID = R2API.PluginGUID + ".surfacedefs";
     public const string PluginName = R2API.PluginName + ".SurfaceDefs";
@@ -51,7 +41,7 @@ public static partial class SurfaceBehaviourManager
         IL.RoR2.CharacterMotor.OnLeaveStableGround += CharacterMotor_OnLeaveStableGround;
     }
 
-    private static void UnsetHooks()
+    internal static void UnsetHooks()
     {
         if (!_hooksSet)
             return;
@@ -87,7 +77,10 @@ public static partial class SurfaceBehaviourManager
         foreach(var association in surfaceDefAssociations)
         {
             yield return null;
-            MethodInfo methodInfo = (MethodInfo)association.target;
+
+            if (association.target is not MethodInfo methodInfo)
+                continue;
+
             if (!methodInfo.IsStatic)
                 continue;
 
@@ -98,7 +91,7 @@ public static partial class SurfaceBehaviourManager
             if (type.IsAbstract)
                 continue;
 
-            if (surfaceDefType.IsAssignableFrom(methodInfo.ReturnType))
+            if (!surfaceDefType.IsAssignableFrom(methodInfo.ReturnType))
                 continue;
 
             if (methodInfo.GetGenericArguments().Length != 0)
@@ -171,8 +164,11 @@ public static partial class SurfaceBehaviourManager
         if (sd)
             newIndex = sd.surfaceDefIndex;
 
+        if (behaviourHandler.currentIndex == newIndex)
+            return;
+
         SendMessageAcrossNetwork(body, newIndex);
-        behaviourHandler.OnSurfaceChanged(newIndex);
+        //behaviourHandler.OnSurfaceChanged(newIndex);
     }
 
     private static void HandleSurfaceExit(CharacterBody body)
@@ -188,8 +184,12 @@ public static partial class SurfaceBehaviourManager
 
         //When the surface is exited it means we should kill the behaviour we have currently.
         SurfaceDefIndex newIndex = SurfaceDefIndex.Invalid;
+
+        if (behaviourHandler.currentIndex == newIndex)
+            return;
+
         SendMessageAcrossNetwork(body, newIndex);
-        behaviourHandler.OnSurfaceChanged(newIndex);
+        //behaviourHandler.OnSurfaceChanged(newIndex);
     }
 
     /*
@@ -213,5 +213,10 @@ public static partial class SurfaceBehaviourManager
             destination = NetworkDestination.Clients | NetworkDestination.Server;
         }
         new SyncSurfaceIndices(targetBody, newIndex).Send(destination);
+    }
+
+    internal static Type GetBehaviourType(SurfaceDefIndex newIndex)
+    {
+        return HG.ArrayUtils.GetSafe(_surfaceIndexToBehaviour, (int)newIndex);
     }
 }
