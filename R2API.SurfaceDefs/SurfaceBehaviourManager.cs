@@ -2,6 +2,8 @@
 using Mono.Cecil.Cil;
 using MonoMod.Cil;
 using R2API.AutoVersionGen;
+using R2API.Networking;
+using R2API.Networking.Interfaces;
 using RoR2;
 using System;
 using System.Collections;
@@ -152,13 +154,64 @@ public static partial class SurfaceBehaviourManager
         }
     }
 
+    //Note: Only machines with authority should sync values up.
     private static void HandleSurfaceContact(CharacterBody body, SurfaceDef sd)
     {
+        if (!body || body.bodyIndex == BodyIndex.None)
+            return;
 
+        if (!body.hasEffectiveAuthority)
+            return;
+
+        if (!body.TryGetComponent<SurfaceBehaviourHandler>(out var behaviourHandler))
+            return;
+
+        SurfaceDefIndex newIndex = SurfaceDefIndex.Invalid;
+        //Some surfaces in the game have no surface def, so just change the surface to an invalid one.
+        if (sd)
+            newIndex = sd.surfaceDefIndex;
+
+        SendMessageAcrossNetwork(body, newIndex);
+        behaviourHandler.OnSurfaceChanged(newIndex);
     }
 
     private static void HandleSurfaceExit(CharacterBody body)
     {
+        if (!body || body.bodyIndex == BodyIndex.None)
+            return;
 
+        if (!body.hasEffectiveAuthority)
+            return;
+
+        if (!body.TryGetComponent<SurfaceBehaviourHandler>(out var behaviourHandler))
+            return;
+
+        //When the surface is exited it means we should kill the behaviour we have currently.
+        SurfaceDefIndex newIndex = SurfaceDefIndex.Invalid;
+        SendMessageAcrossNetwork(body, newIndex);
+        behaviourHandler.OnSurfaceChanged(newIndex);
+    }
+
+    /*
+     * This method is always ran on the Authority machine that owns the characterBody, as such we need to network it properly.
+     * 
+     * Case 1: NetworkServer is Active.
+     * This means that the characterBody is either a Monster, or a Player that's currently hosting the game. In this case we need to sync it to the Clients.
+     * 
+     * Case 2: NetworkServer is NOT active.
+     * This means that the characterBody is a Client that's playing a game, as a result we need to sync it to the other clients (if any), and the server.
+    */
+    private static void SendMessageAcrossNetwork(CharacterBody targetBody, SurfaceDefIndex newIndex)
+    {
+        NetworkDestination destination;
+        if (NetworkServer.active)
+        {
+            destination = NetworkDestination.Clients;
+        }
+        else
+        {
+            destination = NetworkDestination.Clients | NetworkDestination.Server;
+        }
+        new SyncSurfaceIndices(targetBody, newIndex).Send(destination);
     }
 }

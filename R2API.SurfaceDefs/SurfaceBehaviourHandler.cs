@@ -1,10 +1,13 @@
 ﻿using HG.Reflection;
 using JetBrains.Annotations;
+using R2API.Networking;
+using R2API.Networking.Interfaces;
 using RoR2;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
+using UnityEngine.Networking;
 
 namespace R2API;
 
@@ -27,17 +30,23 @@ public class SurfaceBehaviourHandler : MonoBehaviour
 
     private void FixedUpdate()
     {
-        surfaceBehaviour.FixedUpdate();
+        surfaceBehaviour?.FixedUpdate();
     }
 
     private void OnDestroy()
     {
-        surfaceBehaviour.OnExit();
+        surfaceBehaviour?.OnExit();
     }
 
+    //This gets called by the SyncSurfaceIndices message, networking the surface change so the machine that has authority on the body tells everyone else what surface they're on.
     internal void OnSurfaceChanged(SurfaceDefIndex newIndex)
     {
+        //if the incoming index is invalid then we need to delete the current behaviour.
+        if (newIndex == SurfaceDefIndex.Invalid)
+        {
 
+            return;
+        }
     }
 }
 
