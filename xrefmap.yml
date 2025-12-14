@@ -3747,6 +3747,19 @@ references:
   isSpec: "True"
   fullName: R2API.CharacterBodyAPI.AddModdedBodyFlag
   nameWithType: CharacterBodyAPI.AddModdedBodyFlag
+- uid: R2API.CharacterBodyAPI.GetCustomSprintIcon(RoR2.CharacterBody)
+  name: GetCustomSprintIcon(CharacterBody)
+  href: api/R2API.CharacterBodyAPI.html#R2API_CharacterBodyAPI_GetCustomSprintIcon_RoR2_CharacterBody_
+  commentId: M:R2API.CharacterBodyAPI.GetCustomSprintIcon(RoR2.CharacterBody)
+  fullName: R2API.CharacterBodyAPI.GetCustomSprintIcon(RoR2.CharacterBody)
+  nameWithType: CharacterBodyAPI.GetCustomSprintIcon(CharacterBody)
+- uid: R2API.CharacterBodyAPI.GetCustomSprintIcon*
+  name: GetCustomSprintIcon
+  href: api/R2API.CharacterBodyAPI.html#R2API_CharacterBodyAPI_GetCustomSprintIcon_
+  commentId: Overload:R2API.CharacterBodyAPI.GetCustomSprintIcon
+  isSpec: "True"
+  fullName: R2API.CharacterBodyAPI.GetCustomSprintIcon
+  nameWithType: CharacterBodyAPI.GetCustomSprintIcon
 - uid: R2API.CharacterBodyAPI.HasAnyModdedBodyFlag(RoR2.CharacterBody)
   name: HasAnyModdedBodyFlag(CharacterBody)
   href: api/R2API.CharacterBodyAPI.html#R2API_CharacterBodyAPI_HasAnyModdedBodyFlag_RoR2_CharacterBody_
@@ -3849,6 +3862,19 @@ references:
   isSpec: "True"
   fullName: R2API.CharacterBodyAPI.ReserveBodyFlag
   nameWithType: CharacterBodyAPI.ReserveBodyFlag
+- uid: R2API.CharacterBodyAPI.SetCustomSprintIcon(RoR2.CharacterBody,UnityEngine.Sprite)
+  name: SetCustomSprintIcon(CharacterBody, Sprite)
+  href: api/R2API.CharacterBodyAPI.html#R2API_CharacterBodyAPI_SetCustomSprintIcon_RoR2_CharacterBody_UnityEngine_Sprite_
+  commentId: M:R2API.CharacterBodyAPI.SetCustomSprintIcon(RoR2.CharacterBody,UnityEngine.Sprite)
+  fullName: R2API.CharacterBodyAPI.SetCustomSprintIcon(RoR2.CharacterBody, UnityEngine.Sprite)
+  nameWithType: CharacterBodyAPI.SetCustomSprintIcon(CharacterBody, Sprite)
+- uid: R2API.CharacterBodyAPI.SetCustomSprintIcon*
+  name: SetCustomSprintIcon
+  href: api/R2API.CharacterBodyAPI.html#R2API_CharacterBodyAPI_SetCustomSprintIcon_
+  commentId: Overload:R2API.CharacterBodyAPI.SetCustomSprintIcon
+  isSpec: "True"
+  fullName: R2API.CharacterBodyAPI.SetCustomSprintIcon
+  nameWithType: CharacterBodyAPI.SetCustomSprintIcon
 - uid: R2API.CharacterBodyPlugin
   name: CharacterBodyPlugin
   href: api/R2API.CharacterBodyPlugin.html
@@ -4548,40 +4574,40 @@ references:
   fullName: R2API.CustomElite
   nameWithType: CustomElite
 - uid: R2API.CustomElite.#ctor(RoR2.EliteDef,System.Collections.Generic.IEnumerable{RoR2.CombatDirector.EliteTierDef})
-  name: CustomElite(EliteDef?, IEnumerable<EliteTierDef>)
+  name: CustomElite(EliteDef, IEnumerable<EliteTierDef>)
   href: api/R2API.CustomElite.html#R2API_CustomElite__ctor_RoR2_EliteDef_System_Collections_Generic_IEnumerable_RoR2_CombatDirector_EliteTierDef__
   commentId: M:R2API.CustomElite.#ctor(RoR2.EliteDef,System.Collections.Generic.IEnumerable{RoR2.CombatDirector.EliteTierDef})
   name.vb: New(EliteDef, IEnumerable(Of EliteTierDef))
-  fullName: R2API.CustomElite.CustomElite(RoR2.EliteDef?, System.Collections.Generic.IEnumerable<RoR2.CombatDirector.EliteTierDef>)
+  fullName: R2API.CustomElite.CustomElite(RoR2.EliteDef, System.Collections.Generic.IEnumerable<RoR2.CombatDirector.EliteTierDef>)
   fullName.vb: R2API.CustomElite.New(RoR2.EliteDef, System.Collections.Generic.IEnumerable(Of RoR2.CombatDirector.EliteTierDef))
-  nameWithType: CustomElite.CustomElite(EliteDef?, IEnumerable<CombatDirector.EliteTierDef>)
+  nameWithType: CustomElite.CustomElite(EliteDef, IEnumerable<CombatDirector.EliteTierDef>)
   nameWithType.vb: CustomElite.New(EliteDef, IEnumerable(Of CombatDirector.EliteTierDef))
 - uid: R2API.CustomElite.#ctor(RoR2.EliteDef,System.Collections.Generic.IEnumerable{RoR2.CombatDirector.EliteTierDef},UnityEngine.Texture2D)
-  name: CustomElite(EliteDef?, IEnumerable<EliteTierDef>, Texture2D)
+  name: CustomElite(EliteDef, IEnumerable<EliteTierDef>, Texture2D?)
   href: api/R2API.CustomElite.html#R2API_CustomElite__ctor_RoR2_EliteDef_System_Collections_Generic_IEnumerable_RoR2_CombatDirector_EliteTierDef__UnityEngine_Texture2D_
   commentId: M:R2API.CustomElite.#ctor(RoR2.EliteDef,System.Collections.Generic.IEnumerable{RoR2.CombatDirector.EliteTierDef},UnityEngine.Texture2D)
   name.vb: New(EliteDef, IEnumerable(Of EliteTierDef), Texture2D)
-  fullName: R2API.CustomElite.CustomElite(RoR2.EliteDef?, System.Collections.Generic.IEnumerable<RoR2.CombatDirector.EliteTierDef>, UnityEngine.Texture2D)
+  fullName: R2API.CustomElite.CustomElite(RoR2.EliteDef, System.Collections.Generic.IEnumerable<RoR2.CombatDirector.EliteTierDef>, UnityEngine.Texture2D?)
   fullName.vb: R2API.CustomElite.New(RoR2.EliteDef, System.Collections.Generic.IEnumerable(Of RoR2.CombatDirector.EliteTierDef), UnityEngine.Texture2D)
-  nameWithType: CustomElite.CustomElite(EliteDef?, IEnumerable<CombatDirector.EliteTierDef>, Texture2D)
+  nameWithType: CustomElite.CustomElite(EliteDef, IEnumerable<CombatDirector.EliteTierDef>, Texture2D?)
   nameWithType.vb: CustomElite.New(EliteDef, IEnumerable(Of CombatDirector.EliteTierDef), Texture2D)
 - uid: R2API.CustomElite.#ctor(System.String,RoR2.EquipmentDef,UnityEngine.Color32,System.String,System.Collections.Generic.IEnumerable{RoR2.CombatDirector.EliteTierDef})
-  name: CustomElite(string?, EquipmentDef, Color32, string?, IEnumerable<EliteTierDef>)
+  name: CustomElite(string, EquipmentDef, Color32, string, IEnumerable<EliteTierDef>)
   href: api/R2API.CustomElite.html#R2API_CustomElite__ctor_System_String_RoR2_EquipmentDef_UnityEngine_Color32_System_String_System_Collections_Generic_IEnumerable_RoR2_CombatDirector_EliteTierDef__
   commentId: M:R2API.CustomElite.#ctor(System.String,RoR2.EquipmentDef,UnityEngine.Color32,System.String,System.Collections.Generic.IEnumerable{RoR2.CombatDirector.EliteTierDef})
   name.vb: New(String, EquipmentDef, Color32, String, IEnumerable(Of EliteTierDef))
-  fullName: R2API.CustomElite.CustomElite(string?, RoR2.EquipmentDef, UnityEngine.Color32, string?, System.Collections.Generic.IEnumerable<RoR2.CombatDirector.EliteTierDef>)
+  fullName: R2API.CustomElite.CustomElite(string, RoR2.EquipmentDef, UnityEngine.Color32, string, System.Collections.Generic.IEnumerable<RoR2.CombatDirector.EliteTierDef>)
   fullName.vb: R2API.CustomElite.New(String, RoR2.EquipmentDef, UnityEngine.Color32, String, System.Collections.Generic.IEnumerable(Of RoR2.CombatDirector.EliteTierDef))
-  nameWithType: CustomElite.CustomElite(string?, EquipmentDef, Color32, string?, IEnumerable<CombatDirector.EliteTierDef>)
+  nameWithType: CustomElite.CustomElite(string, EquipmentDef, Color32, string, IEnumerable<CombatDirector.EliteTierDef>)
   nameWithType.vb: CustomElite.New(String, EquipmentDef, Color32, String, IEnumerable(Of CombatDirector.EliteTierDef))
 - uid: R2API.CustomElite.#ctor(System.String,RoR2.EquipmentDef,UnityEngine.Color32,System.String,System.Collections.Generic.IEnumerable{RoR2.CombatDirector.EliteTierDef},UnityEngine.Texture2D)
-  name: CustomElite(string?, EquipmentDef, Color32, string?, IEnumerable<EliteTierDef>, Texture2D)
+  name: CustomElite(string, EquipmentDef, Color32, string, IEnumerable<EliteTierDef>, Texture2D?)
   href: api/R2API.CustomElite.html#R2API_CustomElite__ctor_System_String_RoR2_EquipmentDef_UnityEngine_Color32_System_String_System_Collections_Generic_IEnumerable_RoR2_CombatDirector_EliteTierDef__UnityEngine_Texture2D_
   commentId: M:R2API.CustomElite.#ctor(System.String,RoR2.EquipmentDef,UnityEngine.Color32,System.String,System.Collections.Generic.IEnumerable{RoR2.CombatDirector.EliteTierDef},UnityEngine.Texture2D)
   name.vb: New(String, EquipmentDef, Color32, String, IEnumerable(Of EliteTierDef), Texture2D)
-  fullName: R2API.CustomElite.CustomElite(string?, RoR2.EquipmentDef, UnityEngine.Color32, string?, System.Collections.Generic.IEnumerable<RoR2.CombatDirector.EliteTierDef>, UnityEngine.Texture2D)
+  fullName: R2API.CustomElite.CustomElite(string, RoR2.EquipmentDef, UnityEngine.Color32, string, System.Collections.Generic.IEnumerable<RoR2.CombatDirector.EliteTierDef>, UnityEngine.Texture2D?)
   fullName.vb: R2API.CustomElite.New(String, RoR2.EquipmentDef, UnityEngine.Color32, String, System.Collections.Generic.IEnumerable(Of RoR2.CombatDirector.EliteTierDef), UnityEngine.Texture2D)
-  nameWithType: CustomElite.CustomElite(string?, EquipmentDef, Color32, string?, IEnumerable<CombatDirector.EliteTierDef>, Texture2D)
+  nameWithType: CustomElite.CustomElite(string, EquipmentDef, Color32, string, IEnumerable<CombatDirector.EliteTierDef>, Texture2D?)
   nameWithType.vb: CustomElite.New(String, EquipmentDef, Color32, String, IEnumerable(Of CombatDirector.EliteTierDef), Texture2D)
 - uid: R2API.CustomElite.#ctor*
   name: CustomElite
@@ -5851,6 +5877,12 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.AssessmentFocusAwaitingInteraction
   fullName: R2API.DirectorAPI.Helpers.InteractableNames.AssessmentFocusAwaitingInteraction
   nameWithType: DirectorAPI.Helpers.InteractableNames.AssessmentFocusAwaitingInteraction
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.AurelioniteGeode
+  name: AurelioniteGeode
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_AurelioniteGeode
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.AurelioniteGeode
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.AurelioniteGeode
+  nameWithType: DirectorAPI.Helpers.InteractableNames.AurelioniteGeode
 - uid: R2API.DirectorAPI.Helpers.InteractableNames.Barrel
   name: Barrel
   href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_Barrel
@@ -5863,6 +5895,24 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.BluePortal
   fullName: R2API.DirectorAPI.Helpers.InteractableNames.BluePortal
   nameWithType: DirectorAPI.Helpers.InteractableNames.BluePortal
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.BrokenBarrierDrone
+  name: BrokenBarrierDrone
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_BrokenBarrierDrone
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.BrokenBarrierDrone
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.BrokenBarrierDrone
+  nameWithType: DirectorAPI.Helpers.InteractableNames.BrokenBarrierDrone
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.BrokenBombardmentDrone
+  name: BrokenBombardmentDrone
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_BrokenBombardmentDrone
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.BrokenBombardmentDrone
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.BrokenBombardmentDrone
+  nameWithType: DirectorAPI.Helpers.InteractableNames.BrokenBombardmentDrone
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.BrokenCleanupDrone
+  name: BrokenCleanupDrone
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_BrokenCleanupDrone
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.BrokenCleanupDrone
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.BrokenCleanupDrone
+  nameWithType: DirectorAPI.Helpers.InteractableNames.BrokenCleanupDrone
 - uid: R2API.DirectorAPI.Helpers.InteractableNames.BrokenEmergencyDrone
   name: BrokenEmergencyDrone
   href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_BrokenEmergencyDrone
@@ -5875,6 +5925,12 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.BrokenEquipmentDrone
   fullName: R2API.DirectorAPI.Helpers.InteractableNames.BrokenEquipmentDrone
   nameWithType: DirectorAPI.Helpers.InteractableNames.BrokenEquipmentDrone
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.BrokenFreezeDrone
+  name: BrokenFreezeDrone
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_BrokenFreezeDrone
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.BrokenFreezeDrone
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.BrokenFreezeDrone
+  nameWithType: DirectorAPI.Helpers.InteractableNames.BrokenFreezeDrone
 - uid: R2API.DirectorAPI.Helpers.InteractableNames.BrokenGunnerDrone
   name: BrokenGunnerDrone
   href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_BrokenGunnerDrone
@@ -5899,6 +5955,18 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.BrokenIncineratorDrone
   fullName: R2API.DirectorAPI.Helpers.InteractableNames.BrokenIncineratorDrone
   nameWithType: DirectorAPI.Helpers.InteractableNames.BrokenIncineratorDrone
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.BrokenJailerDrone
+  name: BrokenJailerDrone
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_BrokenJailerDrone
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.BrokenJailerDrone
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.BrokenJailerDrone
+  nameWithType: DirectorAPI.Helpers.InteractableNames.BrokenJailerDrone
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.BrokenJunkDrone
+  name: BrokenJunkDrone
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_BrokenJunkDrone
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.BrokenJunkDrone
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.BrokenJunkDrone
+  nameWithType: DirectorAPI.Helpers.InteractableNames.BrokenJunkDrone
 - uid: R2API.DirectorAPI.Helpers.InteractableNames.BrokenMissileDrone
   name: BrokenMissileDrone
   href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_BrokenMissileDrone
@@ -5911,6 +5979,12 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.BrokenTC280
   fullName: R2API.DirectorAPI.Helpers.InteractableNames.BrokenTC280
   nameWithType: DirectorAPI.Helpers.InteractableNames.BrokenTC280
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.BrokenTransportDrone
+  name: BrokenTransportDrone
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_BrokenTransportDrone
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.BrokenTransportDrone
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.BrokenTransportDrone
+  nameWithType: DirectorAPI.Helpers.InteractableNames.BrokenTransportDrone
 - uid: R2API.DirectorAPI.Helpers.InteractableNames.CelestialPortal
   name: CelestialPortal
   href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_CelestialPortal
@@ -5965,6 +6039,12 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.CloakedChest
   fullName: R2API.DirectorAPI.Helpers.InteractableNames.CloakedChest
   nameWithType: DirectorAPI.Helpers.InteractableNames.CloakedChest
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.CollectiveShrineOfCombat
+  name: CollectiveShrineOfCombat
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_CollectiveShrineOfCombat
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.CollectiveShrineOfCombat
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.CollectiveShrineOfCombat
+  nameWithType: DirectorAPI.Helpers.InteractableNames.CollectiveShrineOfCombat
 - uid: R2API.DirectorAPI.Helpers.InteractableNames.DeepVoidPortal
   name: DeepVoidPortal
   href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_DeepVoidPortal
@@ -5977,12 +6057,54 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.DeepVoidSignal
   fullName: R2API.DirectorAPI.Helpers.InteractableNames.DeepVoidSignal
   nameWithType: DirectorAPI.Helpers.InteractableNames.DeepVoidSignal
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.DefunctUnit
+  name: DefunctUnit
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_DefunctUnit
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.DefunctUnit
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.DefunctUnit
+  nameWithType: DirectorAPI.Helpers.InteractableNames.DefunctUnit
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.DestinationPortal
+  name: DestinationPortal
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_DestinationPortal
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.DestinationPortal
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.DestinationPortal
+  nameWithType: DirectorAPI.Helpers.InteractableNames.DestinationPortal
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.DroneCombinerStation
+  name: DroneCombinerStation
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_DroneCombinerStation
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.DroneCombinerStation
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.DroneCombinerStation
+  nameWithType: DirectorAPI.Helpers.InteractableNames.DroneCombinerStation
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.DroneScrapper
+  name: DroneScrapper
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_DroneScrapper
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.DroneScrapper
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.DroneScrapper
+  nameWithType: DirectorAPI.Helpers.InteractableNames.DroneScrapper
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.DroneUpgradeStation
+  name: DroneUpgradeStation
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_DroneUpgradeStation
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.DroneUpgradeStation
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.DroneUpgradeStation
+  nameWithType: DirectorAPI.Helpers.InteractableNames.DroneUpgradeStation
 - uid: R2API.DirectorAPI.Helpers.InteractableNames.EncrustedLockbox
   name: EncrustedLockbox
   href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_EncrustedLockbox
   commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.EncrustedLockbox
   fullName: R2API.DirectorAPI.Helpers.InteractableNames.EncrustedLockbox
   nameWithType: DirectorAPI.Helpers.InteractableNames.EncrustedLockbox
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.EncryptedPortal
+  name: EncryptedPortal
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_EncryptedPortal
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.EncryptedPortal
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.EncryptedPortal
+  nameWithType: DirectorAPI.Helpers.InteractableNames.EncryptedPortal
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.EncryptedPortalHaunt
+  name: EncryptedPortalHaunt
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_EncryptedPortalHaunt
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.EncryptedPortalHaunt
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.EncryptedPortalHaunt
+  nameWithType: DirectorAPI.Helpers.InteractableNames.EncryptedPortalHaunt
 - uid: R2API.DirectorAPI.Helpers.InteractableNames.EquipmentBarrel
   name: EquipmentBarrel
   href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_EquipmentBarrel
@@ -6007,12 +6129,30 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.GoldPortal
   fullName: R2API.DirectorAPI.Helpers.InteractableNames.GoldPortal
   nameWithType: DirectorAPI.Helpers.InteractableNames.GoldPortal
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.GreenPortal
+  name: GreenPortal
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_GreenPortal
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.GreenPortal
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.GreenPortal
+  nameWithType: DirectorAPI.Helpers.InteractableNames.GreenPortal
 - uid: R2API.DirectorAPI.Helpers.InteractableNames.HalcyonBeacon
   name: HalcyonBeacon
   href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_HalcyonBeacon
   commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.HalcyonBeacon
   fullName: R2API.DirectorAPI.Helpers.InteractableNames.HalcyonBeacon
   nameWithType: DirectorAPI.Helpers.InteractableNames.HalcyonBeacon
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.HalcyonShrine
+  name: HalcyonShrine
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_HalcyonShrine
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.HalcyonShrine
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.HalcyonShrine
+  nameWithType: DirectorAPI.Helpers.InteractableNames.HalcyonShrine
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.HalcyonShrineTier1
+  name: HalcyonShrineTier1
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_HalcyonShrineTier1
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.HalcyonShrineTier1
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.HalcyonShrineTier1
+  nameWithType: DirectorAPI.Helpers.InteractableNames.HalcyonShrineTier1
 - uid: R2API.DirectorAPI.Helpers.InteractableNames.InfinitePortal
   name: InfinitePortal
   href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_InfinitePortal
@@ -6055,6 +6195,12 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.LunarPod
   fullName: R2API.DirectorAPI.Helpers.InteractableNames.LunarPod
   nameWithType: DirectorAPI.Helpers.InteractableNames.LunarPod
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.MainlinePortal
+  name: MainlinePortal
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_MainlinePortal
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.MainlinePortal
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.MainlinePortal
+  nameWithType: DirectorAPI.Helpers.InteractableNames.MainlinePortal
 - uid: R2API.DirectorAPI.Helpers.InteractableNames.NewtAltar
   name: NewtAltar
   href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_NewtAltar
@@ -6193,6 +6339,12 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.ShrineOfOrderSnowy
   fullName: R2API.DirectorAPI.Helpers.InteractableNames.ShrineOfOrderSnowy
   nameWithType: DirectorAPI.Helpers.InteractableNames.ShrineOfOrderSnowy
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.ShrineOfShaping
+  name: ShrineOfShaping
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_ShrineOfShaping
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.ShrineOfShaping
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.ShrineOfShaping
+  nameWithType: DirectorAPI.Helpers.InteractableNames.ShrineOfShaping
 - uid: R2API.DirectorAPI.Helpers.InteractableNames.ShrineOftheMountain
   name: ShrineOftheMountain
   href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_ShrineOftheMountain
@@ -6235,6 +6387,12 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.Teleporter
   fullName: R2API.DirectorAPI.Helpers.InteractableNames.Teleporter
   nameWithType: DirectorAPI.Helpers.InteractableNames.Teleporter
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.TemporaryItemDistributor
+  name: TemporaryItemDistributor
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_TemporaryItemDistributor
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.TemporaryItemDistributor
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.TemporaryItemDistributor
+  nameWithType: DirectorAPI.Helpers.InteractableNames.TemporaryItemDistributor
 - uid: R2API.DirectorAPI.Helpers.InteractableNames.TripleShop
   name: TripleShop
   href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_TripleShop
@@ -6253,6 +6411,24 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.TripleShopLarge
   fullName: R2API.DirectorAPI.Helpers.InteractableNames.TripleShopLarge
   nameWithType: DirectorAPI.Helpers.InteractableNames.TripleShopLarge
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.TrippleDroneShop
+  name: TrippleDroneShop
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_TrippleDroneShop
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.TrippleDroneShop
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.TrippleDroneShop
+  nameWithType: DirectorAPI.Helpers.InteractableNames.TrippleDroneShop
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.VirtualPortal
+  name: VirtualPortal
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_VirtualPortal
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.VirtualPortal
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.VirtualPortal
+  nameWithType: DirectorAPI.Helpers.InteractableNames.VirtualPortal
+- uid: R2API.DirectorAPI.Helpers.InteractableNames.VirtualPortalBackout
+  name: VirtualPortalBackout
+  href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_VirtualPortalBackout
+  commentId: F:R2API.DirectorAPI.Helpers.InteractableNames.VirtualPortalBackout
+  fullName: R2API.DirectorAPI.Helpers.InteractableNames.VirtualPortalBackout
+  nameWithType: DirectorAPI.Helpers.InteractableNames.VirtualPortalBackout
 - uid: R2API.DirectorAPI.Helpers.InteractableNames.VoidCradle
   name: VoidCradle
   href: api/R2API.DirectorAPI.Helpers.InteractableNames.html#R2API_DirectorAPI_Helpers_InteractableNames_VoidCradle
@@ -6345,6 +6521,12 @@ references:
   commentId: T:R2API.DirectorAPI.Helpers.MonsterNames
   fullName: R2API.DirectorAPI.Helpers.MonsterNames
   nameWithType: DirectorAPI.Helpers.MonsterNames
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.AlloyHunter
+  name: AlloyHunter
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_AlloyHunter
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.AlloyHunter
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.AlloyHunter
+  nameWithType: DirectorAPI.Helpers.MonsterNames.AlloyHunter
 - uid: R2API.DirectorAPI.Helpers.MonsterNames.AlloyVulture
   name: AlloyVulture
   href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_AlloyVulture
@@ -6441,6 +6623,18 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.BeetleQueen
   fullName: R2API.DirectorAPI.Helpers.MonsterNames.BeetleQueen
   nameWithType: DirectorAPI.Helpers.MonsterNames.BeetleQueen
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.BestBuddy
+  name: BestBuddy
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_BestBuddy
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.BestBuddy
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.BestBuddy
+  nameWithType: DirectorAPI.Helpers.MonsterNames.BestBuddy
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.BestBuddyQuestUnlock
+  name: BestBuddyQuestUnlock
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_BestBuddyQuestUnlock
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.BestBuddyQuestUnlock
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.BestBuddyQuestUnlock
+  nameWithType: DirectorAPI.Helpers.MonsterNames.BestBuddyQuestUnlock
 - uid: R2API.DirectorAPI.Helpers.MonsterNames.BighornBison
   name: BighornBison
   href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_BighornBison
@@ -6477,6 +6671,24 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.BrassContraption
   fullName: R2API.DirectorAPI.Helpers.MonsterNames.BrassContraption
   nameWithType: DirectorAPI.Helpers.MonsterNames.BrassContraption
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.CHIRP
+  name: CHIRP
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_CHIRP
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.CHIRP
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.CHIRP
+  nameWithType: DirectorAPI.Helpers.MonsterNames.CHIRP
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.CROSSHAIRS
+  name: CROSSHAIRS
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_CROSSHAIRS
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.CROSSHAIRS
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.CROSSHAIRS
+  nameWithType: DirectorAPI.Helpers.MonsterNames.CROSSHAIRS
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.Child
+  name: Child
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_Child
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.Child
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.Child
+  nameWithType: DirectorAPI.Helpers.MonsterNames.Child
 - uid: R2API.DirectorAPI.Helpers.MonsterNames.ClayApothecary
   name: ClayApothecary
   href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_ClayApothecary
@@ -6501,6 +6713,12 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.ColDroneman
   fullName: R2API.DirectorAPI.Helpers.MonsterNames.ColDroneman
   nameWithType: DirectorAPI.Helpers.MonsterNames.ColDroneman
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.DOC
+  name: DOC
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_DOC
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.DOC
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.DOC
+  nameWithType: DirectorAPI.Helpers.MonsterNames.DOC
 - uid: R2API.DirectorAPI.Helpers.MonsterNames.DelightedProbe
   name: DelightedProbe
   href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_DelightedProbe
@@ -6513,6 +6731,24 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.ElderLemurian
   fullName: R2API.DirectorAPI.Helpers.MonsterNames.ElderLemurian
   nameWithType: DirectorAPI.Helpers.MonsterNames.ElderLemurian
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.FalseSonBossPhase1
+  name: FalseSonBossPhase1
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_FalseSonBossPhase1
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.FalseSonBossPhase1
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.FalseSonBossPhase1
+  nameWithType: DirectorAPI.Helpers.MonsterNames.FalseSonBossPhase1
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.FalseSonBossPhase2
+  name: FalseSonBossPhase2
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_FalseSonBossPhase2
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.FalseSonBossPhase2
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.FalseSonBossPhase2
+  nameWithType: DirectorAPI.Helpers.MonsterNames.FalseSonBossPhase2
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.FalseSonBossPhase3
+  name: FalseSonBossPhase3
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_FalseSonBossPhase3
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.FalseSonBossPhase3
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.FalseSonBossPhase3
+  nameWithType: DirectorAPI.Helpers.MonsterNames.FalseSonBossPhase3
 - uid: R2API.DirectorAPI.Helpers.MonsterNames.Geep
   name: Geep
   href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_Geep
@@ -6555,6 +6791,12 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.Gup
   fullName: R2API.DirectorAPI.Helpers.MonsterNames.Gup
   nameWithType: DirectorAPI.Helpers.MonsterNames.Gup
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.Halcyonite
+  name: Halcyonite
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_Halcyonite
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.Halcyonite
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.Halcyonite
+  nameWithType: DirectorAPI.Helpers.MonsterNames.Halcyonite
 - uid: R2API.DirectorAPI.Helpers.MonsterNames.HealingDrone
   name: HealingDrone
   href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_HealingDrone
@@ -6603,6 +6845,12 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.LesserWisp
   fullName: R2API.DirectorAPI.Helpers.MonsterNames.LesserWisp
   nameWithType: DirectorAPI.Helpers.MonsterNames.LesserWisp
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.LtDroneboy
+  name: LtDroneboy
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_LtDroneboy
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.LtDroneboy
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.LtDroneboy
+  nameWithType: DirectorAPI.Helpers.MonsterNames.LtDroneboy
 - uid: R2API.DirectorAPI.Helpers.MonsterNames.LunarChimeraExploder
   name: LunarChimeraExploder
   href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_LunarChimeraExploder
@@ -6621,6 +6869,12 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.LunarChimeraWisp
   fullName: R2API.DirectorAPI.Helpers.MonsterNames.LunarChimeraWisp
   nameWithType: DirectorAPI.Helpers.MonsterNames.LunarChimeraWisp
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.LunarRain
+  name: LunarRain
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_LunarRain
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.LunarRain
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.LunarRain
+  nameWithType: DirectorAPI.Helpers.MonsterNames.LunarRain
 - uid: R2API.DirectorAPI.Helpers.MonsterNames.MAJORCONSTRUCT_BODY_NAME
   name: MAJORCONSTRUCT_BODY_NAME
   href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_MAJORCONSTRUCT_BODY_NAME
@@ -6693,18 +6947,102 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.ScavengerBoss
   fullName: R2API.DirectorAPI.Helpers.MonsterNames.ScavengerBoss
   nameWithType: DirectorAPI.Helpers.MonsterNames.ScavengerBoss
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.Scorchling
+  name: Scorchling
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_Scorchling
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.Scorchling
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.Scorchling
+  nameWithType: DirectorAPI.Helpers.MonsterNames.Scorchling
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.SeveredBreaker
+  name: SeveredBreaker
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_SeveredBreaker
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.SeveredBreaker
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.SeveredBreaker
+  nameWithType: DirectorAPI.Helpers.MonsterNames.SeveredBreaker
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.SeveredProbe
+  name: SeveredProbe
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_SeveredProbe
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.SeveredProbe
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.SeveredProbe
+  nameWithType: DirectorAPI.Helpers.MonsterNames.SeveredProbe
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.SeveredScorcher
+  name: SeveredScorcher
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_SeveredScorcher
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.SeveredScorcher
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.SeveredScorcher
+  nameWithType: DirectorAPI.Helpers.MonsterNames.SeveredScorcher
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.SolusAmalgamator
+  name: SolusAmalgamator
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_SolusAmalgamator
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.SolusAmalgamator
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.SolusAmalgamator
+  nameWithType: DirectorAPI.Helpers.MonsterNames.SolusAmalgamator
 - uid: R2API.DirectorAPI.Helpers.MonsterNames.SolusControlUnit
   name: SolusControlUnit
   href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_SolusControlUnit
   commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.SolusControlUnit
   fullName: R2API.DirectorAPI.Helpers.MonsterNames.SolusControlUnit
   nameWithType: DirectorAPI.Helpers.MonsterNames.SolusControlUnit
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.SolusDistributor
+  name: SolusDistributor
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_SolusDistributor
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.SolusDistributor
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.SolusDistributor
+  nameWithType: DirectorAPI.Helpers.MonsterNames.SolusDistributor
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.SolusExtractor
+  name: SolusExtractor
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_SolusExtractor
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.SolusExtractor
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.SolusExtractor
+  nameWithType: DirectorAPI.Helpers.MonsterNames.SolusExtractor
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.SolusHeart
+  name: SolusHeart
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_SolusHeart
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.SolusHeart
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.SolusHeart
+  nameWithType: DirectorAPI.Helpers.MonsterNames.SolusHeart
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.SolusInvalidator
+  name: SolusInvalidator
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_SolusInvalidator
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.SolusInvalidator
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.SolusInvalidator
+  nameWithType: DirectorAPI.Helpers.MonsterNames.SolusInvalidator
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.SolusMine
+  name: SolusMine
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_SolusMine
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.SolusMine
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.SolusMine
+  nameWithType: DirectorAPI.Helpers.MonsterNames.SolusMine
 - uid: R2API.DirectorAPI.Helpers.MonsterNames.SolusProbe
   name: SolusProbe
   href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_SolusProbe
   commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.SolusProbe
   fullName: R2API.DirectorAPI.Helpers.MonsterNames.SolusProbe
   nameWithType: DirectorAPI.Helpers.MonsterNames.SolusProbe
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.SolusProspector
+  name: SolusProspector
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_SolusProspector
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.SolusProspector
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.SolusProspector
+  nameWithType: DirectorAPI.Helpers.MonsterNames.SolusProspector
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.SolusScorcher
+  name: SolusScorcher
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_SolusScorcher
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.SolusScorcher
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.SolusScorcher
+  nameWithType: DirectorAPI.Helpers.MonsterNames.SolusScorcher
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.SolusTransporter
+  name: SolusTransporter
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_SolusTransporter
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.SolusTransporter
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.SolusTransporter
+  nameWithType: DirectorAPI.Helpers.MonsterNames.SolusTransporter
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.SolusWing
+  name: SolusWing
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_SolusWing
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.SolusWing
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.SolusWing
+  nameWithType: DirectorAPI.Helpers.MonsterNames.SolusWing
 - uid: R2API.DirectorAPI.Helpers.MonsterNames.SquidTurret
   name: SquidTurret
   href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_SquidTurret
@@ -6849,6 +7187,18 @@ references:
   commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.VoidlingPhase3
   fullName: R2API.DirectorAPI.Helpers.MonsterNames.VoidlingPhase3
   nameWithType: DirectorAPI.Helpers.MonsterNames.VoidlingPhase3
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.VultureHuntressInvader
+  name: VultureHuntressInvader
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_VultureHuntressInvader
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.VultureHuntressInvader
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.VultureHuntressInvader
+  nameWithType: DirectorAPI.Helpers.MonsterNames.VultureHuntressInvader
+- uid: R2API.DirectorAPI.Helpers.MonsterNames.VultureMulTInvader
+  name: VultureMulTInvader
+  href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_VultureMulTInvader
+  commentId: F:R2API.DirectorAPI.Helpers.MonsterNames.VultureMulTInvader
+  fullName: R2API.DirectorAPI.Helpers.MonsterNames.VultureMulTInvader
+  nameWithType: DirectorAPI.Helpers.MonsterNames.VultureMulTInvader
 - uid: R2API.DirectorAPI.Helpers.MonsterNames.WanderingVagrant
   name: WanderingVagrant
   href: api/R2API.DirectorAPI.Helpers.MonsterNames.html#R2API_DirectorAPI_Helpers_MonsterNames_WanderingVagrant
@@ -7437,6 +7787,18 @@ references:
   commentId: F:R2API.DirectorAPI.Stage.CommencementSimulacrum
   fullName: R2API.DirectorAPI.Stage.CommencementSimulacrum
   nameWithType: DirectorAPI.Stage.CommencementSimulacrum
+- uid: R2API.DirectorAPI.Stage.ComputationalExchange
+  name: ComputationalExchange
+  href: api/R2API.DirectorAPI.Stage.html#R2API_DirectorAPI_Stage_ComputationalExchange
+  commentId: F:R2API.DirectorAPI.Stage.ComputationalExchange
+  fullName: R2API.DirectorAPI.Stage.ComputationalExchange
+  nameWithType: DirectorAPI.Stage.ComputationalExchange
+- uid: R2API.DirectorAPI.Stage.ConduitCanyon
+  name: ConduitCanyon
+  href: api/R2API.DirectorAPI.Stage.html#R2API_DirectorAPI_Stage_ConduitCanyon
+  commentId: F:R2API.DirectorAPI.Stage.ConduitCanyon
+  fullName: R2API.DirectorAPI.Stage.ConduitCanyon
+  nameWithType: DirectorAPI.Stage.ConduitCanyon
 - uid: R2API.DirectorAPI.Stage.Custom
   name: Custom
   href: api/R2API.DirectorAPI.Stage.html#R2API_DirectorAPI_Stage_Custom
@@ -7473,6 +7835,18 @@ references:
   commentId: F:R2API.DirectorAPI.Stage.HelminthHatchery
   fullName: R2API.DirectorAPI.Stage.HelminthHatchery
   nameWithType: DirectorAPI.Stage.HelminthHatchery
+- uid: R2API.DirectorAPI.Stage.IronAlluvium
+  name: IronAlluvium
+  href: api/R2API.DirectorAPI.Stage.html#R2API_DirectorAPI_Stage_IronAlluvium
+  commentId: F:R2API.DirectorAPI.Stage.IronAlluvium
+  fullName: R2API.DirectorAPI.Stage.IronAlluvium
+  nameWithType: DirectorAPI.Stage.IronAlluvium
+- uid: R2API.DirectorAPI.Stage.IronAuroras
+  name: IronAuroras
+  href: api/R2API.DirectorAPI.Stage.html#R2API_DirectorAPI_Stage_IronAuroras
+  commentId: F:R2API.DirectorAPI.Stage.IronAuroras
+  fullName: R2API.DirectorAPI.Stage.IronAuroras
+  nameWithType: DirectorAPI.Stage.IronAuroras
 - uid: R2API.DirectorAPI.Stage.MomentFractured
   name: MomentFractured
   href: api/R2API.DirectorAPI.Stage.html#R2API_DirectorAPI_Stage_MomentFractured
@@ -7485,6 +7859,18 @@ references:
   commentId: F:R2API.DirectorAPI.Stage.MomentWhole
   fullName: R2API.DirectorAPI.Stage.MomentWhole
   nameWithType: DirectorAPI.Stage.MomentWhole
+- uid: R2API.DirectorAPI.Stage.NeuralSanctum
+  name: NeuralSanctum
+  href: api/R2API.DirectorAPI.Stage.html#R2API_DirectorAPI_Stage_NeuralSanctum
+  commentId: F:R2API.DirectorAPI.Stage.NeuralSanctum
+  fullName: R2API.DirectorAPI.Stage.NeuralSanctum
+  nameWithType: DirectorAPI.Stage.NeuralSanctum
+- uid: R2API.DirectorAPI.Stage.PretendersPrecipice
+  name: PretendersPrecipice
+  href: api/R2API.DirectorAPI.Stage.html#R2API_DirectorAPI_Stage_PretendersPrecipice
+  commentId: F:R2API.DirectorAPI.Stage.PretendersPrecipice
+  fullName: R2API.DirectorAPI.Stage.PretendersPrecipice
+  nameWithType: DirectorAPI.Stage.PretendersPrecipice
 - uid: R2API.DirectorAPI.Stage.PrimeMeridian
   name: PrimeMeridian
   href: api/R2API.DirectorAPI.Stage.html#R2API_DirectorAPI_Stage_PrimeMeridian
@@ -7509,6 +7895,12 @@ references:
   commentId: F:R2API.DirectorAPI.Stage.ReformedAltar
   fullName: R2API.DirectorAPI.Stage.ReformedAltar
   nameWithType: DirectorAPI.Stage.ReformedAltar
+- uid: R2API.DirectorAPI.Stage.RepurposedCrater
+  name: RepurposedCrater
+  href: api/R2API.DirectorAPI.Stage.html#R2API_DirectorAPI_Stage_RepurposedCrater
+  commentId: F:R2API.DirectorAPI.Stage.RepurposedCrater
+  fullName: R2API.DirectorAPI.Stage.RepurposedCrater
+  nameWithType: DirectorAPI.Stage.RepurposedCrater
 - uid: R2API.DirectorAPI.Stage.ScorchedAcres
   name: ScorchedAcres
   href: api/R2API.DirectorAPI.Stage.html#R2API_DirectorAPI_Stage_ScorchedAcres
@@ -7545,6 +7937,12 @@ references:
   commentId: F:R2API.DirectorAPI.Stage.SkyMeadowSimulacrum
   fullName: R2API.DirectorAPI.Stage.SkyMeadowSimulacrum
   nameWithType: DirectorAPI.Stage.SkyMeadowSimulacrum
+- uid: R2API.DirectorAPI.Stage.SolutionalHaunt
+  name: SolutionalHaunt
+  href: api/R2API.DirectorAPI.Stage.html#R2API_DirectorAPI_Stage_SolutionalHaunt
+  commentId: F:R2API.DirectorAPI.Stage.SolutionalHaunt
+  fullName: R2API.DirectorAPI.Stage.SolutionalHaunt
+  nameWithType: DirectorAPI.Stage.SolutionalHaunt
 - uid: R2API.DirectorAPI.Stage.SulfurPools
   name: SulfurPools
   href: api/R2API.DirectorAPI.Stage.html#R2API_DirectorAPI_Stage_SulfurPools
@@ -8025,6 +8423,45 @@ references:
   isSpec: "True"
   fullName: R2API.EliteAPI.GetCombatDirectorEliteTiers
   nameWithType: EliteAPI.GetCombatDirectorEliteTiers
+- uid: R2API.EliteAPI.GetEliteTierEnumerable(R2API.VanillaEliteTier)
+  name: GetEliteTierEnumerable(VanillaEliteTier)
+  href: api/R2API.EliteAPI.html#R2API_EliteAPI_GetEliteTierEnumerable_R2API_VanillaEliteTier_
+  commentId: M:R2API.EliteAPI.GetEliteTierEnumerable(R2API.VanillaEliteTier)
+  fullName: R2API.EliteAPI.GetEliteTierEnumerable(R2API.VanillaEliteTier)
+  nameWithType: EliteAPI.GetEliteTierEnumerable(VanillaEliteTier)
+- uid: R2API.EliteAPI.GetEliteTierEnumerable*
+  name: GetEliteTierEnumerable
+  href: api/R2API.EliteAPI.html#R2API_EliteAPI_GetEliteTierEnumerable_
+  commentId: Overload:R2API.EliteAPI.GetEliteTierEnumerable
+  isSpec: "True"
+  fullName: R2API.EliteAPI.GetEliteTierEnumerable
+  nameWithType: EliteAPI.GetEliteTierEnumerable
+- uid: R2API.EliteAPI.GetHonorEliteTierEnumerable(R2API.VanillaEliteTier)
+  name: GetHonorEliteTierEnumerable(VanillaEliteTier)
+  href: api/R2API.EliteAPI.html#R2API_EliteAPI_GetHonorEliteTierEnumerable_R2API_VanillaEliteTier_
+  commentId: M:R2API.EliteAPI.GetHonorEliteTierEnumerable(R2API.VanillaEliteTier)
+  fullName: R2API.EliteAPI.GetHonorEliteTierEnumerable(R2API.VanillaEliteTier)
+  nameWithType: EliteAPI.GetHonorEliteTierEnumerable(VanillaEliteTier)
+- uid: R2API.EliteAPI.GetHonorEliteTierEnumerable*
+  name: GetHonorEliteTierEnumerable
+  href: api/R2API.EliteAPI.html#R2API_EliteAPI_GetHonorEliteTierEnumerable_
+  commentId: Overload:R2API.EliteAPI.GetHonorEliteTierEnumerable
+  isSpec: "True"
+  fullName: R2API.EliteAPI.GetHonorEliteTierEnumerable
+  nameWithType: EliteAPI.GetHonorEliteTierEnumerable
+- uid: R2API.EliteAPI.GetVanillaEliteTierDef(R2API.VanillaEliteTier)
+  name: GetVanillaEliteTierDef(VanillaEliteTier)
+  href: api/R2API.EliteAPI.html#R2API_EliteAPI_GetVanillaEliteTierDef_R2API_VanillaEliteTier_
+  commentId: M:R2API.EliteAPI.GetVanillaEliteTierDef(R2API.VanillaEliteTier)
+  fullName: R2API.EliteAPI.GetVanillaEliteTierDef(R2API.VanillaEliteTier)
+  nameWithType: EliteAPI.GetVanillaEliteTierDef(VanillaEliteTier)
+- uid: R2API.EliteAPI.GetVanillaEliteTierDef*
+  name: GetVanillaEliteTierDef
+  href: api/R2API.EliteAPI.html#R2API_EliteAPI_GetVanillaEliteTierDef_
+  commentId: Overload:R2API.EliteAPI.GetVanillaEliteTierDef
+  isSpec: "True"
+  fullName: R2API.EliteAPI.GetVanillaEliteTierDef
+  nameWithType: EliteAPI.GetVanillaEliteTierDef
 - uid: R2API.EliteAPI.Loaded
   name: Loaded
   href: api/R2API.EliteAPI.html#R2API_EliteAPI_Loaded
@@ -8039,13 +8476,13 @@ references:
   fullName: R2API.EliteAPI.Loaded
   nameWithType: EliteAPI.Loaded
 - uid: R2API.EliteAPI.OverrideCombatDirectorEliteTiers(RoR2.CombatDirector.EliteTierDef[])
-  name: OverrideCombatDirectorEliteTiers(EliteTierDef?[]?)
+  name: OverrideCombatDirectorEliteTiers(EliteTierDef[])
   href: api/R2API.EliteAPI.html#R2API_EliteAPI_OverrideCombatDirectorEliteTiers_RoR2_CombatDirector_EliteTierDef___
   commentId: M:R2API.EliteAPI.OverrideCombatDirectorEliteTiers(RoR2.CombatDirector.EliteTierDef[])
   name.vb: OverrideCombatDirectorEliteTiers(EliteTierDef())
-  fullName: R2API.EliteAPI.OverrideCombatDirectorEliteTiers(RoR2.CombatDirector.EliteTierDef?[]?)
+  fullName: R2API.EliteAPI.OverrideCombatDirectorEliteTiers(RoR2.CombatDirector.EliteTierDef[])
   fullName.vb: R2API.EliteAPI.OverrideCombatDirectorEliteTiers(RoR2.CombatDirector.EliteTierDef())
-  nameWithType: EliteAPI.OverrideCombatDirectorEliteTiers(CombatDirector.EliteTierDef?[]?)
+  nameWithType: EliteAPI.OverrideCombatDirectorEliteTiers(CombatDirector.EliteTierDef[])
   nameWithType.vb: EliteAPI.OverrideCombatDirectorEliteTiers(CombatDirector.EliteTierDef())
 - uid: R2API.EliteAPI.OverrideCombatDirectorEliteTiers*
   name: OverrideCombatDirectorEliteTiers
@@ -8174,6 +8611,84 @@ references:
   commentId: T:R2API.ElitesPlugin
   fullName: R2API.ElitesPlugin
   nameWithType: ElitesPlugin
+- uid: R2API.ExecuteAPI
+  name: ExecuteAPI
+  href: api/R2API.ExecuteAPI.html
+  commentId: T:R2API.ExecuteAPI
+  fullName: R2API.ExecuteAPI
+  nameWithType: ExecuteAPI
+- uid: R2API.ExecuteAPI.CalculateAdditiveExecuteThreshold
+  name: CalculateAdditiveExecuteThreshold
+  href: api/R2API.ExecuteAPI.html#R2API_ExecuteAPI_CalculateAdditiveExecuteThreshold
+  commentId: F:R2API.ExecuteAPI.CalculateAdditiveExecuteThreshold
+  fullName: R2API.ExecuteAPI.CalculateAdditiveExecuteThreshold
+  nameWithType: ExecuteAPI.CalculateAdditiveExecuteThreshold
+- uid: R2API.ExecuteAPI.CalculateAdditiveExecuteThresholdEventHandler
+  name: ExecuteAPI.CalculateAdditiveExecuteThresholdEventHandler
+  href: api/R2API.ExecuteAPI.CalculateAdditiveExecuteThresholdEventHandler.html
+  commentId: T:R2API.ExecuteAPI.CalculateAdditiveExecuteThresholdEventHandler
+  fullName: R2API.ExecuteAPI.CalculateAdditiveExecuteThresholdEventHandler
+  nameWithType: ExecuteAPI.CalculateAdditiveExecuteThresholdEventHandler
+- uid: R2API.ExecuteAPI.CalculateAdditiveExecuteThresholdForViewer
+  name: CalculateAdditiveExecuteThresholdForViewer
+  href: api/R2API.ExecuteAPI.html#R2API_ExecuteAPI_CalculateAdditiveExecuteThresholdForViewer
+  commentId: F:R2API.ExecuteAPI.CalculateAdditiveExecuteThresholdForViewer
+  fullName: R2API.ExecuteAPI.CalculateAdditiveExecuteThresholdForViewer
+  nameWithType: ExecuteAPI.CalculateAdditiveExecuteThresholdForViewer
+- uid: R2API.ExecuteAPI.CalculateAdditiveExecuteThresholdForViewerEventHandler
+  name: ExecuteAPI.CalculateAdditiveExecuteThresholdForViewerEventHandler
+  href: api/R2API.ExecuteAPI.CalculateAdditiveExecuteThresholdForViewerEventHandler.html
+  commentId: T:R2API.ExecuteAPI.CalculateAdditiveExecuteThresholdForViewerEventHandler
+  fullName: R2API.ExecuteAPI.CalculateAdditiveExecuteThresholdForViewerEventHandler
+  nameWithType: ExecuteAPI.CalculateAdditiveExecuteThresholdForViewerEventHandler
+- uid: R2API.ExecuteAPI.CalculateExecuteThreshold
+  name: CalculateExecuteThreshold
+  href: api/R2API.ExecuteAPI.html#R2API_ExecuteAPI_CalculateExecuteThreshold
+  commentId: F:R2API.ExecuteAPI.CalculateExecuteThreshold
+  fullName: R2API.ExecuteAPI.CalculateExecuteThreshold
+  nameWithType: ExecuteAPI.CalculateExecuteThreshold
+- uid: R2API.ExecuteAPI.CalculateExecuteThresholdEventHandler
+  name: ExecuteAPI.CalculateExecuteThresholdEventHandler
+  href: api/R2API.ExecuteAPI.CalculateExecuteThresholdEventHandler.html
+  commentId: T:R2API.ExecuteAPI.CalculateExecuteThresholdEventHandler
+  fullName: R2API.ExecuteAPI.CalculateExecuteThresholdEventHandler
+  nameWithType: ExecuteAPI.CalculateExecuteThresholdEventHandler
+- uid: R2API.ExecuteAPI.CalculateExecuteThresholdForViewer
+  name: CalculateExecuteThresholdForViewer
+  href: api/R2API.ExecuteAPI.html#R2API_ExecuteAPI_CalculateExecuteThresholdForViewer
+  commentId: F:R2API.ExecuteAPI.CalculateExecuteThresholdForViewer
+  fullName: R2API.ExecuteAPI.CalculateExecuteThresholdForViewer
+  nameWithType: ExecuteAPI.CalculateExecuteThresholdForViewer
+- uid: R2API.ExecuteAPI.CalculateExecuteThresholdForViewerEventHandler
+  name: ExecuteAPI.CalculateExecuteThresholdForViewerEventHandler
+  href: api/R2API.ExecuteAPI.CalculateExecuteThresholdForViewerEventHandler.html
+  commentId: T:R2API.ExecuteAPI.CalculateExecuteThresholdForViewerEventHandler
+  fullName: R2API.ExecuteAPI.CalculateExecuteThresholdForViewerEventHandler
+  nameWithType: ExecuteAPI.CalculateExecuteThresholdForViewerEventHandler
+- uid: R2API.ExecuteAPI.PluginGUID
+  name: PluginGUID
+  href: api/R2API.ExecuteAPI.html#R2API_ExecuteAPI_PluginGUID
+  commentId: F:R2API.ExecuteAPI.PluginGUID
+  fullName: R2API.ExecuteAPI.PluginGUID
+  nameWithType: ExecuteAPI.PluginGUID
+- uid: R2API.ExecuteAPI.PluginName
+  name: PluginName
+  href: api/R2API.ExecuteAPI.html#R2API_ExecuteAPI_PluginName
+  commentId: F:R2API.ExecuteAPI.PluginName
+  fullName: R2API.ExecuteAPI.PluginName
+  nameWithType: ExecuteAPI.PluginName
+- uid: R2API.ExecuteAPI.PluginVersion
+  name: PluginVersion
+  href: api/R2API.ExecuteAPI.html#R2API_ExecuteAPI_PluginVersion
+  commentId: F:R2API.ExecuteAPI.PluginVersion
+  fullName: R2API.ExecuteAPI.PluginVersion
+  nameWithType: ExecuteAPI.PluginVersion
+- uid: R2API.ExecutePlugin
+  name: ExecutePlugin
+  href: api/R2API.ExecutePlugin.html
+  commentId: T:R2API.ExecutePlugin
+  fullName: R2API.ExecutePlugin
+  nameWithType: ExecutePlugin
 - uid: R2API.ExtendedRuleChoiceDef
   name: ExtendedRuleChoiceDef
   href: api/R2API.ExtendedRuleChoiceDef.html
@@ -8216,6 +8731,111 @@ references:
   commentId: F:R2API.GameModeInfo.buttonHoverDescription
   fullName: R2API.GameModeInfo.buttonHoverDescription
   nameWithType: GameModeInfo.buttonHoverDescription
+- uid: R2API.HealthBarAPI
+  name: HealthBarAPI
+  href: api/R2API.HealthBarAPI.html
+  commentId: T:R2API.HealthBarAPI
+  fullName: R2API.HealthBarAPI
+  nameWithType: HealthBarAPI
+- uid: R2API.HealthBarAPI.AddOverlayToBody(RoR2.CharacterBody,R2API.HealthBarAPI.BarOverlayIndex)
+  name: AddOverlayToBody(CharacterBody, BarOverlayIndex)
+  href: api/R2API.HealthBarAPI.html#R2API_HealthBarAPI_AddOverlayToBody_RoR2_CharacterBody_R2API_HealthBarAPI_BarOverlayIndex_
+  commentId: M:R2API.HealthBarAPI.AddOverlayToBody(RoR2.CharacterBody,R2API.HealthBarAPI.BarOverlayIndex)
+  fullName: R2API.HealthBarAPI.AddOverlayToBody(RoR2.CharacterBody, R2API.HealthBarAPI.BarOverlayIndex)
+  nameWithType: HealthBarAPI.AddOverlayToBody(CharacterBody, HealthBarAPI.BarOverlayIndex)
+- uid: R2API.HealthBarAPI.AddOverlayToBody*
+  name: AddOverlayToBody
+  href: api/R2API.HealthBarAPI.html#R2API_HealthBarAPI_AddOverlayToBody_
+  commentId: Overload:R2API.HealthBarAPI.AddOverlayToBody
+  isSpec: "True"
+  fullName: R2API.HealthBarAPI.AddOverlayToBody
+  nameWithType: HealthBarAPI.AddOverlayToBody
+- uid: R2API.HealthBarAPI.BarOverlayIndex
+  name: HealthBarAPI.BarOverlayIndex
+  href: api/R2API.HealthBarAPI.BarOverlayIndex.html
+  commentId: T:R2API.HealthBarAPI.BarOverlayIndex
+  fullName: R2API.HealthBarAPI.BarOverlayIndex
+  nameWithType: HealthBarAPI.BarOverlayIndex
+- uid: R2API.HealthBarAPI.BarOverlayIndex.None
+  name: None
+  href: api/R2API.HealthBarAPI.BarOverlayIndex.html#R2API_HealthBarAPI_BarOverlayIndex_None
+  commentId: F:R2API.HealthBarAPI.BarOverlayIndex.None
+  fullName: R2API.HealthBarAPI.BarOverlayIndex.None
+  nameWithType: HealthBarAPI.BarOverlayIndex.None
+- uid: R2API.HealthBarAPI.BarOverlayInfo
+  name: HealthBarAPI.BarOverlayInfo
+  href: api/R2API.HealthBarAPI.BarOverlayInfo.html
+  commentId: T:R2API.HealthBarAPI.BarOverlayInfo
+  fullName: R2API.HealthBarAPI.BarOverlayInfo
+  nameWithType: HealthBarAPI.BarOverlayInfo
+- uid: R2API.HealthBarAPI.BarOverlayInfo.BarInfo
+  name: BarInfo
+  href: api/R2API.HealthBarAPI.BarOverlayInfo.html#R2API_HealthBarAPI_BarOverlayInfo_BarInfo
+  commentId: F:R2API.HealthBarAPI.BarOverlayInfo.BarInfo
+  fullName: R2API.HealthBarAPI.BarOverlayInfo.BarInfo
+  nameWithType: HealthBarAPI.BarOverlayInfo.BarInfo
+- uid: R2API.HealthBarAPI.BarOverlayInfo.BodySpecific
+  name: BodySpecific
+  href: api/R2API.HealthBarAPI.BarOverlayInfo.html#R2API_HealthBarAPI_BarOverlayInfo_BodySpecific
+  commentId: F:R2API.HealthBarAPI.BarOverlayInfo.BodySpecific
+  fullName: R2API.HealthBarAPI.BarOverlayInfo.BodySpecific
+  nameWithType: HealthBarAPI.BarOverlayInfo.BodySpecific
+- uid: R2API.HealthBarAPI.BarOverlayInfo.ModifyBarInfo
+  name: ModifyBarInfo
+  href: api/R2API.HealthBarAPI.BarOverlayInfo.html#R2API_HealthBarAPI_BarOverlayInfo_ModifyBarInfo
+  commentId: F:R2API.HealthBarAPI.BarOverlayInfo.ModifyBarInfo
+  fullName: R2API.HealthBarAPI.BarOverlayInfo.ModifyBarInfo
+  nameWithType: HealthBarAPI.BarOverlayInfo.ModifyBarInfo
+- uid: R2API.HealthBarAPI.BarOverlayInfo.ModifyBarInfoCallback
+  name: HealthBarAPI.BarOverlayInfo.ModifyBarInfoCallback
+  href: api/R2API.HealthBarAPI.BarOverlayInfo.ModifyBarInfoCallback.html
+  commentId: T:R2API.HealthBarAPI.BarOverlayInfo.ModifyBarInfoCallback
+  fullName: R2API.HealthBarAPI.BarOverlayInfo.ModifyBarInfoCallback
+  nameWithType: HealthBarAPI.BarOverlayInfo.ModifyBarInfoCallback
+- uid: R2API.HealthBarAPI.BarOverlayInfo.ModifyHealthValues
+  name: ModifyHealthValues
+  href: api/R2API.HealthBarAPI.BarOverlayInfo.html#R2API_HealthBarAPI_BarOverlayInfo_ModifyHealthValues
+  commentId: F:R2API.HealthBarAPI.BarOverlayInfo.ModifyHealthValues
+  fullName: R2API.HealthBarAPI.BarOverlayInfo.ModifyHealthValues
+  nameWithType: HealthBarAPI.BarOverlayInfo.ModifyHealthValues
+- uid: R2API.HealthBarAPI.BarOverlayInfo.ModifyHealthValuesCallback
+  name: HealthBarAPI.BarOverlayInfo.ModifyHealthValuesCallback
+  href: api/R2API.HealthBarAPI.BarOverlayInfo.ModifyHealthValuesCallback.html
+  commentId: T:R2API.HealthBarAPI.BarOverlayInfo.ModifyHealthValuesCallback
+  fullName: R2API.HealthBarAPI.BarOverlayInfo.ModifyHealthValuesCallback
+  nameWithType: HealthBarAPI.BarOverlayInfo.ModifyHealthValuesCallback
+- uid: R2API.HealthBarAPI.BarOverlayInfo.OverlayIndex
+  name: OverlayIndex
+  href: api/R2API.HealthBarAPI.BarOverlayInfo.html#R2API_HealthBarAPI_BarOverlayInfo_OverlayIndex
+  commentId: F:R2API.HealthBarAPI.BarOverlayInfo.OverlayIndex
+  fullName: R2API.HealthBarAPI.BarOverlayInfo.OverlayIndex
+  nameWithType: HealthBarAPI.BarOverlayInfo.OverlayIndex
+- uid: R2API.HealthBarAPI.RegisterBarOverlay(R2API.HealthBarAPI.BarOverlayInfo)
+  name: RegisterBarOverlay(BarOverlayInfo)
+  href: api/R2API.HealthBarAPI.html#R2API_HealthBarAPI_RegisterBarOverlay_R2API_HealthBarAPI_BarOverlayInfo_
+  commentId: M:R2API.HealthBarAPI.RegisterBarOverlay(R2API.HealthBarAPI.BarOverlayInfo)
+  fullName: R2API.HealthBarAPI.RegisterBarOverlay(R2API.HealthBarAPI.BarOverlayInfo)
+  nameWithType: HealthBarAPI.RegisterBarOverlay(HealthBarAPI.BarOverlayInfo)
+- uid: R2API.HealthBarAPI.RegisterBarOverlay*
+  name: RegisterBarOverlay
+  href: api/R2API.HealthBarAPI.html#R2API_HealthBarAPI_RegisterBarOverlay_
+  commentId: Overload:R2API.HealthBarAPI.RegisterBarOverlay
+  isSpec: "True"
+  fullName: R2API.HealthBarAPI.RegisterBarOverlay
+  nameWithType: HealthBarAPI.RegisterBarOverlay
+- uid: R2API.HealthBarAPI.RemoveOverlayFromBody(RoR2.CharacterBody,R2API.HealthBarAPI.BarOverlayIndex)
+  name: RemoveOverlayFromBody(CharacterBody, BarOverlayIndex)
+  href: api/R2API.HealthBarAPI.html#R2API_HealthBarAPI_RemoveOverlayFromBody_RoR2_CharacterBody_R2API_HealthBarAPI_BarOverlayIndex_
+  commentId: M:R2API.HealthBarAPI.RemoveOverlayFromBody(RoR2.CharacterBody,R2API.HealthBarAPI.BarOverlayIndex)
+  fullName: R2API.HealthBarAPI.RemoveOverlayFromBody(RoR2.CharacterBody, R2API.HealthBarAPI.BarOverlayIndex)
+  nameWithType: HealthBarAPI.RemoveOverlayFromBody(CharacterBody, HealthBarAPI.BarOverlayIndex)
+- uid: R2API.HealthBarAPI.RemoveOverlayFromBody*
+  name: RemoveOverlayFromBody
+  href: api/R2API.HealthBarAPI.html#R2API_HealthBarAPI_RemoveOverlayFromBody_
+  commentId: Overload:R2API.HealthBarAPI.RemoveOverlayFromBody
+  isSpec: "True"
+  fullName: R2API.HealthBarAPI.RemoveOverlayFromBody
+  nameWithType: HealthBarAPI.RemoveOverlayFromBody
 - uid: R2API.IModdedUnlockableDataProvider
   name: IModdedUnlockableDataProvider
   href: api/R2API.IModdedUnlockableDataProvider.html
@@ -11865,6 +12485,12 @@ references:
   isSpec: "True"
   fullName: R2API.Networking.NetworkingHelpers.ApplyBuff
   nameWithType: NetworkingHelpers.ApplyBuff
+- uid: R2API.Networking.NetworkingHelpers.ApplyDot(RoR2.HealthComponent,RoR2.InflictDotInfo)
+  name: ApplyDot(HealthComponent, InflictDotInfo)
+  href: api/R2API.Networking.NetworkingHelpers.html#R2API_Networking_NetworkingHelpers_ApplyDot_RoR2_HealthComponent_RoR2_InflictDotInfo_
+  commentId: M:R2API.Networking.NetworkingHelpers.ApplyDot(RoR2.HealthComponent,RoR2.InflictDotInfo)
+  fullName: R2API.Networking.NetworkingHelpers.ApplyDot(RoR2.HealthComponent, RoR2.InflictDotInfo)
+  nameWithType: NetworkingHelpers.ApplyDot(HealthComponent, InflictDotInfo)
 - uid: R2API.Networking.NetworkingHelpers.ApplyDot(RoR2.HealthComponent,UnityEngine.GameObject,RoR2.DotController.DotIndex,System.Single,System.Single)
   name: ApplyDot(HealthComponent, GameObject, DotIndex, float, float)
   href: api/R2API.Networking.NetworkingHelpers.html#R2API_Networking_NetworkingHelpers_ApplyDot_RoR2_HealthComponent_UnityEngine_GameObject_RoR2_DotController_DotIndex_System_Single_System_Single_
@@ -12460,6 +13086,36 @@ references:
   commentId: T:R2API.RecalculateStatsAPI
   fullName: R2API.RecalculateStatsAPI
   nameWithType: RecalculateStatsAPI
+- uid: R2API.RecalculateStatsAPI.CustomStats
+  name: RecalculateStatsAPI.CustomStats
+  href: api/R2API.RecalculateStatsAPI.CustomStats.html
+  commentId: T:R2API.RecalculateStatsAPI.CustomStats
+  fullName: R2API.RecalculateStatsAPI.CustomStats
+  nameWithType: RecalculateStatsAPI.CustomStats
+- uid: R2API.RecalculateStatsAPI.CustomStats.barrierDecayFrozen
+  name: barrierDecayFrozen
+  href: api/R2API.RecalculateStatsAPI.CustomStats.html#R2API_RecalculateStatsAPI_CustomStats_barrierDecayFrozen
+  commentId: F:R2API.RecalculateStatsAPI.CustomStats.barrierDecayFrozen
+  fullName: R2API.RecalculateStatsAPI.CustomStats.barrierDecayFrozen
+  nameWithType: RecalculateStatsAPI.CustomStats.barrierDecayFrozen
+- uid: R2API.RecalculateStatsAPI.CustomStats.barrierDecayRateAdd
+  name: barrierDecayRateAdd
+  href: api/R2API.RecalculateStatsAPI.CustomStats.html#R2API_RecalculateStatsAPI_CustomStats_barrierDecayRateAdd
+  commentId: F:R2API.RecalculateStatsAPI.CustomStats.barrierDecayRateAdd
+  fullName: R2API.RecalculateStatsAPI.CustomStats.barrierDecayRateAdd
+  nameWithType: RecalculateStatsAPI.CustomStats.barrierDecayRateAdd
+- uid: R2API.RecalculateStatsAPI.CustomStats.barrierDecayRateMult
+  name: barrierDecayRateMult
+  href: api/R2API.RecalculateStatsAPI.CustomStats.html#R2API_RecalculateStatsAPI_CustomStats_barrierDecayRateMult
+  commentId: F:R2API.RecalculateStatsAPI.CustomStats.barrierDecayRateMult
+  fullName: R2API.RecalculateStatsAPI.CustomStats.barrierDecayRateMult
+  nameWithType: RecalculateStatsAPI.CustomStats.barrierDecayRateMult
+- uid: R2API.RecalculateStatsAPI.CustomStats.luckFromBody
+  name: luckFromBody
+  href: api/R2API.RecalculateStatsAPI.CustomStats.html#R2API_RecalculateStatsAPI_CustomStats_luckFromBody
+  commentId: F:R2API.RecalculateStatsAPI.CustomStats.luckFromBody
+  fullName: R2API.RecalculateStatsAPI.CustomStats.luckFromBody
+  nameWithType: RecalculateStatsAPI.CustomStats.luckFromBody
 - uid: R2API.RecalculateStatsAPI.GetStatCoefficients
   name: GetStatCoefficients
   href: api/R2API.RecalculateStatsAPI.html#R2API_RecalculateStatsAPI_GetStatCoefficients
@@ -12497,12 +13153,73 @@ references:
   commentId: F:R2API.RecalculateStatsAPI.PluginVersion
   fullName: R2API.RecalculateStatsAPI.PluginVersion
   nameWithType: RecalculateStatsAPI.PluginVersion
+- uid: R2API.RecalculateStatsAPI.SkillSlotStatModifiers
+  name: RecalculateStatsAPI.SkillSlotStatModifiers
+  href: api/R2API.RecalculateStatsAPI.SkillSlotStatModifiers.html
+  commentId: T:R2API.RecalculateStatsAPI.SkillSlotStatModifiers
+  fullName: R2API.RecalculateStatsAPI.SkillSlotStatModifiers
+  nameWithType: RecalculateStatsAPI.SkillSlotStatModifiers
+- uid: R2API.RecalculateStatsAPI.SkillSlotStatModifiers.#ctor
+  name: SkillSlotStatModifiers()
+  href: api/R2API.RecalculateStatsAPI.SkillSlotStatModifiers.html#R2API_RecalculateStatsAPI_SkillSlotStatModifiers__ctor
+  commentId: M:R2API.RecalculateStatsAPI.SkillSlotStatModifiers.#ctor
+  name.vb: New()
+  fullName: R2API.RecalculateStatsAPI.SkillSlotStatModifiers.SkillSlotStatModifiers()
+  fullName.vb: R2API.RecalculateStatsAPI.SkillSlotStatModifiers.New()
+  nameWithType: RecalculateStatsAPI.SkillSlotStatModifiers.SkillSlotStatModifiers()
+  nameWithType.vb: RecalculateStatsAPI.SkillSlotStatModifiers.New()
+- uid: R2API.RecalculateStatsAPI.SkillSlotStatModifiers.#ctor*
+  name: SkillSlotStatModifiers
+  href: api/R2API.RecalculateStatsAPI.SkillSlotStatModifiers.html#R2API_RecalculateStatsAPI_SkillSlotStatModifiers__ctor_
+  commentId: Overload:R2API.RecalculateStatsAPI.SkillSlotStatModifiers.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: R2API.RecalculateStatsAPI.SkillSlotStatModifiers.SkillSlotStatModifiers
+  fullName.vb: R2API.RecalculateStatsAPI.SkillSlotStatModifiers.New
+  nameWithType: RecalculateStatsAPI.SkillSlotStatModifiers.SkillSlotStatModifiers
+  nameWithType.vb: RecalculateStatsAPI.SkillSlotStatModifiers.New
+- uid: R2API.RecalculateStatsAPI.SkillSlotStatModifiers.bonusStockAdd
+  name: bonusStockAdd
+  href: api/R2API.RecalculateStatsAPI.SkillSlotStatModifiers.html#R2API_RecalculateStatsAPI_SkillSlotStatModifiers_bonusStockAdd
+  commentId: F:R2API.RecalculateStatsAPI.SkillSlotStatModifiers.bonusStockAdd
+  fullName: R2API.RecalculateStatsAPI.SkillSlotStatModifiers.bonusStockAdd
+  nameWithType: RecalculateStatsAPI.SkillSlotStatModifiers.bonusStockAdd
+- uid: R2API.RecalculateStatsAPI.SkillSlotStatModifiers.cooldownFlatReduction
+  name: cooldownFlatReduction
+  href: api/R2API.RecalculateStatsAPI.SkillSlotStatModifiers.html#R2API_RecalculateStatsAPI_SkillSlotStatModifiers_cooldownFlatReduction
+  commentId: F:R2API.RecalculateStatsAPI.SkillSlotStatModifiers.cooldownFlatReduction
+  fullName: R2API.RecalculateStatsAPI.SkillSlotStatModifiers.cooldownFlatReduction
+  nameWithType: RecalculateStatsAPI.SkillSlotStatModifiers.cooldownFlatReduction
+- uid: R2API.RecalculateStatsAPI.SkillSlotStatModifiers.cooldownMultAdd
+  name: cooldownMultAdd
+  href: api/R2API.RecalculateStatsAPI.SkillSlotStatModifiers.html#R2API_RecalculateStatsAPI_SkillSlotStatModifiers_cooldownMultAdd
+  commentId: F:R2API.RecalculateStatsAPI.SkillSlotStatModifiers.cooldownMultAdd
+  fullName: R2API.RecalculateStatsAPI.SkillSlotStatModifiers.cooldownMultAdd
+  nameWithType: RecalculateStatsAPI.SkillSlotStatModifiers.cooldownMultAdd
+- uid: R2API.RecalculateStatsAPI.SkillSlotStatModifiers.cooldownMultiplier
+  name: cooldownMultiplier
+  href: api/R2API.RecalculateStatsAPI.SkillSlotStatModifiers.html#R2API_RecalculateStatsAPI_SkillSlotStatModifiers_cooldownMultiplier
+  commentId: F:R2API.RecalculateStatsAPI.SkillSlotStatModifiers.cooldownMultiplier
+  fullName: R2API.RecalculateStatsAPI.SkillSlotStatModifiers.cooldownMultiplier
+  nameWithType: RecalculateStatsAPI.SkillSlotStatModifiers.cooldownMultiplier
+- uid: R2API.RecalculateStatsAPI.SkillSlotStatModifiers.cooldownReductionMultAdd
+  name: cooldownReductionMultAdd
+  href: api/R2API.RecalculateStatsAPI.SkillSlotStatModifiers.html#R2API_RecalculateStatsAPI_SkillSlotStatModifiers_cooldownReductionMultAdd
+  commentId: F:R2API.RecalculateStatsAPI.SkillSlotStatModifiers.cooldownReductionMultAdd
+  fullName: R2API.RecalculateStatsAPI.SkillSlotStatModifiers.cooldownReductionMultAdd
+  nameWithType: RecalculateStatsAPI.SkillSlotStatModifiers.cooldownReductionMultAdd
 - uid: R2API.RecalculateStatsAPI.StatHookEventArgs
   name: RecalculateStatsAPI.StatHookEventArgs
   href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html
   commentId: T:R2API.RecalculateStatsAPI.StatHookEventArgs
   fullName: R2API.RecalculateStatsAPI.StatHookEventArgs
   nameWithType: RecalculateStatsAPI.StatHookEventArgs
+- uid: R2API.RecalculateStatsAPI.StatHookEventArgs.allSkills
+  name: allSkills
+  href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_allSkills
+  commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.allSkills
+  fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.allSkills
+  nameWithType: RecalculateStatsAPI.StatHookEventArgs.allSkills
 - uid: R2API.RecalculateStatsAPI.StatHookEventArgs.armorAdd
   name: armorAdd
   href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_armorAdd
@@ -12533,6 +13250,18 @@ references:
   commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.attackSpeedTotalMult
   fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.attackSpeedTotalMult
   nameWithType: RecalculateStatsAPI.StatHookEventArgs.attackSpeedTotalMult
+- uid: R2API.RecalculateStatsAPI.StatHookEventArgs.barrierDecayAdd
+  name: barrierDecayAdd
+  href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_barrierDecayAdd
+  commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.barrierDecayAdd
+  fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.barrierDecayAdd
+  nameWithType: RecalculateStatsAPI.StatHookEventArgs.barrierDecayAdd
+- uid: R2API.RecalculateStatsAPI.StatHookEventArgs.barrierDecayMult
+  name: barrierDecayMult
+  href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_barrierDecayMult
+  commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.barrierDecayMult
+  fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.barrierDecayMult
+  nameWithType: RecalculateStatsAPI.StatHookEventArgs.barrierDecayMult
 - uid: R2API.RecalculateStatsAPI.StatHookEventArgs.baseAttackSpeedAdd
   name: baseAttackSpeedAdd
   href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_baseAttackSpeedAdd
@@ -12593,18 +13322,6 @@ references:
   commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.bleedChanceMult
   fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.bleedChanceMult
   nameWithType: RecalculateStatsAPI.StatHookEventArgs.bleedChanceMult
-- uid: R2API.RecalculateStatsAPI.StatHookEventArgs.cooldownMultAdd
-  name: cooldownMultAdd
-  href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_cooldownMultAdd
-  commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.cooldownMultAdd
-  fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.cooldownMultAdd
-  nameWithType: RecalculateStatsAPI.StatHookEventArgs.cooldownMultAdd
-- uid: R2API.RecalculateStatsAPI.StatHookEventArgs.cooldownReductionAdd
-  name: cooldownReductionAdd
-  href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_cooldownReductionAdd
-  commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.cooldownReductionAdd
-  fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.cooldownReductionAdd
-  nameWithType: RecalculateStatsAPI.StatHookEventArgs.cooldownReductionAdd
 - uid: R2API.RecalculateStatsAPI.StatHookEventArgs.critAdd
   name: critAdd
   href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_critAdd
@@ -12749,6 +13466,12 @@ references:
   commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.levelShieldAdd
   fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.levelShieldAdd
   nameWithType: RecalculateStatsAPI.StatHookEventArgs.levelShieldAdd
+- uid: R2API.RecalculateStatsAPI.StatHookEventArgs.luckAdd
+  name: luckAdd
+  href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_luckAdd
+  commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.luckAdd
+  fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.luckAdd
+  nameWithType: RecalculateStatsAPI.StatHookEventArgs.luckAdd
 - uid: R2API.RecalculateStatsAPI.StatHookEventArgs.moveSpeedMultAdd
   name: moveSpeedMultAdd
   href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_moveSpeedMultAdd
@@ -12773,12 +13496,12 @@ references:
   commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.moveSpeedTotalMult
   fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.moveSpeedTotalMult
   nameWithType: RecalculateStatsAPI.StatHookEventArgs.moveSpeedTotalMult
-- uid: R2API.RecalculateStatsAPI.StatHookEventArgs.primaryCooldownMultAdd
-  name: primaryCooldownMultAdd
-  href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_primaryCooldownMultAdd
-  commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.primaryCooldownMultAdd
-  fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.primaryCooldownMultAdd
-  nameWithType: RecalculateStatsAPI.StatHookEventArgs.primaryCooldownMultAdd
+- uid: R2API.RecalculateStatsAPI.StatHookEventArgs.primarySkill
+  name: primarySkill
+  href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_primarySkill
+  commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.primarySkill
+  fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.primarySkill
+  nameWithType: RecalculateStatsAPI.StatHookEventArgs.primarySkill
 - uid: R2API.RecalculateStatsAPI.StatHookEventArgs.regenMultAdd
   name: regenMultAdd
   href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_regenMultAdd
@@ -12791,12 +13514,12 @@ references:
   commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.regenTotalMult
   fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.regenTotalMult
   nameWithType: RecalculateStatsAPI.StatHookEventArgs.regenTotalMult
-- uid: R2API.RecalculateStatsAPI.StatHookEventArgs.secondaryCooldownMultAdd
-  name: secondaryCooldownMultAdd
-  href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_secondaryCooldownMultAdd
-  commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.secondaryCooldownMultAdd
-  fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.secondaryCooldownMultAdd
-  nameWithType: RecalculateStatsAPI.StatHookEventArgs.secondaryCooldownMultAdd
+- uid: R2API.RecalculateStatsAPI.StatHookEventArgs.secondarySkill
+  name: secondarySkill
+  href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_secondarySkill
+  commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.secondarySkill
+  fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.secondarySkill
+  nameWithType: RecalculateStatsAPI.StatHookEventArgs.secondarySkill
 - uid: R2API.RecalculateStatsAPI.StatHookEventArgs.shieldMultAdd
   name: shieldMultAdd
   href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_shieldMultAdd
@@ -12809,24 +13532,30 @@ references:
   commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.shieldTotalMult
   fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.shieldTotalMult
   nameWithType: RecalculateStatsAPI.StatHookEventArgs.shieldTotalMult
-- uid: R2API.RecalculateStatsAPI.StatHookEventArgs.specialCooldownMultAdd
-  name: specialCooldownMultAdd
-  href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_specialCooldownMultAdd
-  commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.specialCooldownMultAdd
-  fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.specialCooldownMultAdd
-  nameWithType: RecalculateStatsAPI.StatHookEventArgs.specialCooldownMultAdd
+- uid: R2API.RecalculateStatsAPI.StatHookEventArgs.shouldFreezeBarrier
+  name: shouldFreezeBarrier
+  href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_shouldFreezeBarrier
+  commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.shouldFreezeBarrier
+  fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.shouldFreezeBarrier
+  nameWithType: RecalculateStatsAPI.StatHookEventArgs.shouldFreezeBarrier
+- uid: R2API.RecalculateStatsAPI.StatHookEventArgs.specialSkill
+  name: specialSkill
+  href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_specialSkill
+  commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.specialSkill
+  fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.specialSkill
+  nameWithType: RecalculateStatsAPI.StatHookEventArgs.specialSkill
 - uid: R2API.RecalculateStatsAPI.StatHookEventArgs.sprintSpeedAdd
   name: sprintSpeedAdd
   href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_sprintSpeedAdd
   commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.sprintSpeedAdd
   fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.sprintSpeedAdd
   nameWithType: RecalculateStatsAPI.StatHookEventArgs.sprintSpeedAdd
-- uid: R2API.RecalculateStatsAPI.StatHookEventArgs.utilityCooldownMultAdd
-  name: utilityCooldownMultAdd
-  href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_utilityCooldownMultAdd
-  commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.utilityCooldownMultAdd
-  fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.utilityCooldownMultAdd
-  nameWithType: RecalculateStatsAPI.StatHookEventArgs.utilityCooldownMultAdd
+- uid: R2API.RecalculateStatsAPI.StatHookEventArgs.utilitySkill
+  name: utilitySkill
+  href: api/R2API.RecalculateStatsAPI.StatHookEventArgs.html#R2API_RecalculateStatsAPI_StatHookEventArgs_utilitySkill
+  commentId: F:R2API.RecalculateStatsAPI.StatHookEventArgs.utilitySkill
+  fullName: R2API.RecalculateStatsAPI.StatHookEventArgs.utilitySkill
+  nameWithType: RecalculateStatsAPI.StatHookEventArgs.utilitySkill
 - uid: R2API.RecalculateStatsAPI.StatHookEventHandler
   name: RecalculateStatsAPI.StatHookEventHandler
   href: api/R2API.RecalculateStatsAPI.StatHookEventHandler.html
@@ -13866,6 +14595,30 @@ references:
   commentId: T:R2API.SkillsPlugin
   fullName: R2API.SkillsPlugin
   nameWithType: SkillsPlugin
+- uid: R2API.SkinCustomGameobjectComponent
+  name: SkinCustomGameobjectComponent
+  href: api/R2API.SkinCustomGameobjectComponent.html
+  commentId: T:R2API.SkinCustomGameobjectComponent
+  fullName: R2API.SkinCustomGameobjectComponent
+  nameWithType: SkinCustomGameobjectComponent
+- uid: R2API.SkinCustomGameobjectComponent.characterModel
+  name: characterModel
+  href: api/R2API.SkinCustomGameobjectComponent.html#R2API_SkinCustomGameobjectComponent_characterModel
+  commentId: F:R2API.SkinCustomGameobjectComponent.characterModel
+  fullName: R2API.SkinCustomGameobjectComponent.characterModel
+  nameWithType: SkinCustomGameobjectComponent.characterModel
+- uid: R2API.SkinCustomGameobjectComponent.extraLightInfos
+  name: extraLightInfos
+  href: api/R2API.SkinCustomGameobjectComponent.html#R2API_SkinCustomGameobjectComponent_extraLightInfos
+  commentId: F:R2API.SkinCustomGameobjectComponent.extraLightInfos
+  fullName: R2API.SkinCustomGameobjectComponent.extraLightInfos
+  nameWithType: SkinCustomGameobjectComponent.extraLightInfos
+- uid: R2API.SkinCustomGameobjectComponent.extraRendererInfos
+  name: extraRendererInfos
+  href: api/R2API.SkinCustomGameobjectComponent.html#R2API_SkinCustomGameobjectComponent_extraRendererInfos
+  commentId: F:R2API.SkinCustomGameobjectComponent.extraRendererInfos
+  fullName: R2API.SkinCustomGameobjectComponent.extraRendererInfos
+  nameWithType: SkinCustomGameobjectComponent.extraRendererInfos
 - uid: R2API.SkinDefInfo
   name: SkinDefInfo
   href: api/R2API.SkinDefInfo.html
@@ -15328,6 +16081,12 @@ references:
   commentId: F:R2API.SkinSkillVariantsDef.lightInfoSkillVariants
   fullName: R2API.SkinSkillVariantsDef.lightInfoSkillVariants
   nameWithType: SkinSkillVariantsDef.lightInfoSkillVariants
+- uid: R2API.SkinSkillVariantsDef.lowPriority
+  name: lowPriority
+  href: api/R2API.SkinSkillVariantsDef.html#R2API_SkinSkillVariantsDef_lowPriority
+  commentId: F:R2API.SkinSkillVariantsDef.lowPriority
+  fullName: R2API.SkinSkillVariantsDef.lowPriority
+  nameWithType: SkinSkillVariantsDef.lowPriority
 - uid: R2API.SkinSkillVariantsDef.meshReplacementSkillVariants
   name: meshReplacementSkillVariants
   href: api/R2API.SkinSkillVariantsDef.html#R2API_SkinSkillVariantsDef_meshReplacementSkillVariants
@@ -16517,6 +17276,19 @@ references:
   fullName.vb: R2API.TeamsAPI.TeamBehavior.New
   nameWithType: TeamsAPI.TeamBehavior.TeamBehavior
   nameWithType.vb: TeamsAPI.TeamBehavior.New
+- uid: R2API.TeamsAPI.TeamBehavior.CanPickup
+  name: CanPickup
+  href: api/R2API.TeamsAPI.TeamBehavior.html#R2API_TeamsAPI_TeamBehavior_CanPickup
+  commentId: P:R2API.TeamsAPI.TeamBehavior.CanPickup
+  fullName: R2API.TeamsAPI.TeamBehavior.CanPickup
+  nameWithType: TeamsAPI.TeamBehavior.CanPickup
+- uid: R2API.TeamsAPI.TeamBehavior.CanPickup*
+  name: CanPickup
+  href: api/R2API.TeamsAPI.TeamBehavior.html#R2API_TeamsAPI_TeamBehavior_CanPickup_
+  commentId: Overload:R2API.TeamsAPI.TeamBehavior.CanPickup
+  isSpec: "True"
+  fullName: R2API.TeamsAPI.TeamBehavior.CanPickup
+  nameWithType: TeamsAPI.TeamBehavior.CanPickup
 - uid: R2API.TeamsAPI.TeamBehavior.Classification
   name: Classification
   href: api/R2API.TeamsAPI.TeamBehavior.html#R2API_TeamsAPI_TeamBehavior_Classification
@@ -18587,6 +19359,54 @@ references:
   commentId: F:R2API.Utils.VersionStrictness.EveryoneNeedSameModVersion
   fullName: R2API.Utils.VersionStrictness.EveryoneNeedSameModVersion
   nameWithType: VersionStrictness.EveryoneNeedSameModVersion
+- uid: R2API.VanillaEliteTier
+  name: VanillaEliteTier
+  href: api/R2API.VanillaEliteTier.html
+  commentId: T:R2API.VanillaEliteTier
+  fullName: R2API.VanillaEliteTier
+  nameWithType: VanillaEliteTier
+- uid: R2API.VanillaEliteTier.BaseTier1
+  name: BaseTier1
+  href: api/R2API.VanillaEliteTier.html#R2API_VanillaEliteTier_BaseTier1
+  commentId: F:R2API.VanillaEliteTier.BaseTier1
+  fullName: R2API.VanillaEliteTier.BaseTier1
+  nameWithType: VanillaEliteTier.BaseTier1
+- uid: R2API.VanillaEliteTier.BaseTier1Honor
+  name: BaseTier1Honor
+  href: api/R2API.VanillaEliteTier.html#R2API_VanillaEliteTier_BaseTier1Honor
+  commentId: F:R2API.VanillaEliteTier.BaseTier1Honor
+  fullName: R2API.VanillaEliteTier.BaseTier1Honor
+  nameWithType: VanillaEliteTier.BaseTier1Honor
+- uid: R2API.VanillaEliteTier.FullTier1
+  name: FullTier1
+  href: api/R2API.VanillaEliteTier.html#R2API_VanillaEliteTier_FullTier1
+  commentId: F:R2API.VanillaEliteTier.FullTier1
+  fullName: R2API.VanillaEliteTier.FullTier1
+  nameWithType: VanillaEliteTier.FullTier1
+- uid: R2API.VanillaEliteTier.FullTier1Honor
+  name: FullTier1Honor
+  href: api/R2API.VanillaEliteTier.html#R2API_VanillaEliteTier_FullTier1Honor
+  commentId: F:R2API.VanillaEliteTier.FullTier1Honor
+  fullName: R2API.VanillaEliteTier.FullTier1Honor
+  nameWithType: VanillaEliteTier.FullTier1Honor
+- uid: R2API.VanillaEliteTier.Lunar
+  name: Lunar
+  href: api/R2API.VanillaEliteTier.html#R2API_VanillaEliteTier_Lunar
+  commentId: F:R2API.VanillaEliteTier.Lunar
+  fullName: R2API.VanillaEliteTier.Lunar
+  nameWithType: VanillaEliteTier.Lunar
+- uid: R2API.VanillaEliteTier.None
+  name: None
+  href: api/R2API.VanillaEliteTier.html#R2API_VanillaEliteTier_None
+  commentId: F:R2API.VanillaEliteTier.None
+  fullName: R2API.VanillaEliteTier.None
+  nameWithType: VanillaEliteTier.None
+- uid: R2API.VanillaEliteTier.Tier2
+  name: Tier2
+  href: api/R2API.VanillaEliteTier.html#R2API_VanillaEliteTier_Tier2
+  commentId: F:R2API.VanillaEliteTier.Tier2
+  fullName: R2API.VanillaEliteTier.Tier2
+  nameWithType: VanillaEliteTier.Tier2
 - uid: RoR2
   name: RoR2
   href: api/RoR2.html
@@ -18599,6 +19419,12 @@ references:
   commentId: T:RoR2.CharacterBody
   fullName: RoR2.CharacterBody
   nameWithType: CharacterBody
+- uid: RoR2.CharacterBody.r2api_customSprintIcon
+  name: r2api_customSprintIcon
+  href: api/RoR2.CharacterBody.html#RoR2_CharacterBody_r2api_customSprintIcon
+  commentId: F:RoR2.CharacterBody.r2api_customSprintIcon
+  fullName: RoR2.CharacterBody.r2api_customSprintIcon
+  nameWithType: CharacterBody.r2api_customSprintIcon
 - uid: RoR2.CharacterBody.r2api_moddedBodyFlags
   name: r2api_moddedBodyFlags
   href: api/RoR2.CharacterBody.html#RoR2_CharacterBody_r2api_moddedBodyFlags
@@ -18869,3 +19695,27 @@ references:
   commentId: F:RoR2.TeamMask.r2api_moddedMask
   fullName: RoR2.TeamMask.r2api_moddedMask
   nameWithType: TeamMask.r2api_moddedMask
+- uid: RoR2.UI
+  name: RoR2.UI
+  href: api/RoR2.UI.html
+  commentId: N:RoR2.UI
+  fullName: RoR2.UI
+  nameWithType: RoR2.UI
+- uid: RoR2.UI.SprintIcon
+  name: SprintIcon
+  href: api/RoR2.UI.SprintIcon.html
+  commentId: T:RoR2.UI.SprintIcon
+  fullName: RoR2.UI.SprintIcon
+  nameWithType: SprintIcon
+- uid: RoR2.UI.SprintIcon.r2api_currentCustomSprintIcon
+  name: r2api_currentCustomSprintIcon
+  href: api/RoR2.UI.SprintIcon.html#RoR2_UI_SprintIcon_r2api_currentCustomSprintIcon
+  commentId: F:RoR2.UI.SprintIcon.r2api_currentCustomSprintIcon
+  fullName: RoR2.UI.SprintIcon.r2api_currentCustomSprintIcon
+  nameWithType: SprintIcon.r2api_currentCustomSprintIcon
+- uid: RoR2.UI.SprintIcon.r2api_customIconObject
+  name: r2api_customIconObject
+  href: api/RoR2.UI.SprintIcon.html#RoR2_UI_SprintIcon_r2api_customIconObject
+  commentId: F:RoR2.UI.SprintIcon.r2api_customIconObject
+  fullName: RoR2.UI.SprintIcon.r2api_customIconObject
+  nameWithType: SprintIcon.r2api_customIconObject

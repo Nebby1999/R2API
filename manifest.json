@@ -954,6 +954,66 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/R2API.ExecuteAPI.CalculateAdditiveExecuteThresholdEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/R2API.ExecuteAPI.CalculateAdditiveExecuteThresholdEventHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/R2API.ExecuteAPI.CalculateAdditiveExecuteThresholdForViewerEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/R2API.ExecuteAPI.CalculateAdditiveExecuteThresholdForViewerEventHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/R2API.ExecuteAPI.CalculateExecuteThresholdEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/R2API.ExecuteAPI.CalculateExecuteThresholdEventHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/R2API.ExecuteAPI.CalculateExecuteThresholdForViewerEventHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/R2API.ExecuteAPI.CalculateExecuteThresholdForViewerEventHandler.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/R2API.ExecuteAPI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/R2API.ExecuteAPI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/R2API.ExecutePlugin.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/R2API.ExecutePlugin.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/R2API.ExtendedRuleChoiceDef.yml",
       "output": {
         ".html": {
@@ -968,6 +1028,56 @@
       "output": {
         ".html": {
           "relative_path": "api/R2API.GameModeInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/R2API.HealthBarAPI.BarOverlayIndex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/R2API.HealthBarAPI.BarOverlayIndex.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/R2API.HealthBarAPI.BarOverlayInfo.ModifyBarInfoCallback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/R2API.HealthBarAPI.BarOverlayInfo.ModifyBarInfoCallback.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/R2API.HealthBarAPI.BarOverlayInfo.ModifyHealthValuesCallback.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/R2API.HealthBarAPI.BarOverlayInfo.ModifyHealthValuesCallback.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/R2API.HealthBarAPI.BarOverlayInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/R2API.HealthBarAPI.BarOverlayInfo.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/R2API.HealthBarAPI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/R2API.HealthBarAPI.html"
         }
       },
       "version": ""
@@ -1724,6 +1834,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/R2API.RecalculateStatsAPI.CustomStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/R2API.RecalculateStatsAPI.CustomStats.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/R2API.RecalculateStatsAPI.SkillSlotStatModifiers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/R2API.RecalculateStatsAPI.SkillSlotStatModifiers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/R2API.RecalculateStatsAPI.StatHookEventArgs.yml",
       "output": {
         ".html": {
@@ -1918,6 +2048,16 @@
       "output": {
         ".html": {
           "relative_path": "api/R2API.SkillsPlugin.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/R2API.SkinCustomGameobjectComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/R2API.SkinCustomGameobjectComponent.html"
         }
       },
       "version": ""
@@ -2694,6 +2834,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/R2API.VanillaEliteTier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/R2API.VanillaEliteTier.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/R2API.yml",
       "output": {
         ".html": {
@@ -2924,6 +3074,26 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/RoR2.UI.SprintIcon.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RoR2.UI.SprintIcon.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/RoR2.UI.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/RoR2.UI.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/RoR2.yml",
       "output": {
         ".html": {
@@ -2946,11 +3116,11 @@
       "type": "Toc",
       "source_relative_path": "api/toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "api/toc.json"
-        },
         ".html": {
           "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
         }
       },
       "version": ""
@@ -2969,11 +3139,11 @@
       "type": "Toc",
       "source_relative_path": "toc.yml",
       "output": {
-        ".json": {
-          "relative_path": "toc.json"
-        },
         ".html": {
           "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
       "version": ""

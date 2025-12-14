@@ -202,6 +202,11 @@ All mods will be working off the same settings, so operators like *=, +=, -=, an
       <section></section>
       <h4><a class="xref" href="R2API.ElitesPlugin.html">ElitesPlugin</a></h4>
       <section></section>
+      <h4><a class="xref" href="R2API.ExecuteAPI.html">ExecuteAPI</a></h4>
+      <section><p>API for stacking character execute thresholds with diminishing returns.</p>
+</section>
+      <h4><a class="xref" href="R2API.ExecutePlugin.html">ExecutePlugin</a></h4>
+      <section></section>
       <h4><a class="xref" href="R2API.ExtendedRuleChoiceDef.html">ExtendedRuleChoiceDef</a></h4>
       <section><p>Represents an Extended version of a RuleChoiceDef
 Unlike regular RuleChoiceDefs, an ExtendedRulechoiceDef can have multiple requirements, such as multiple expansions or multiple unlockables required.</p>
@@ -209,6 +214,12 @@ Unlike regular RuleChoiceDefs, an ExtendedRulechoiceDef can have multiple requir
 </section>
       <h4><a class="xref" href="R2API.GameModeInfo.html">GameModeInfo</a></h4>
       <section><p>Component to attach to your GameMode prefab. buttonHoverDescription is the only current attribute.</p>
+</section>
+      <h4><a class="xref" href="R2API.HealthBarAPI.html">HealthBarAPI</a></h4>
+      <section><p>API for modifying the HealthBar</p>
+</section>
+      <h4><a class="xref" href="R2API.HealthBarAPI.BarOverlayInfo.html">HealthBarAPI.BarOverlayInfo</a></h4>
+      <section><p>Defines on a modded HealthBar overlay.</p>
 </section>
       <h4><a class="xref" href="R2API.ItemAPI.html">ItemAPI</a></h4>
       <section></section>
@@ -259,6 +270,8 @@ Unlike regular RuleChoiceDefs, an ExtendedRulechoiceDef can have multiple requir
       <h4><a class="xref" href="R2API.RecalculateStatsAPI.html">RecalculateStatsAPI</a></h4>
       <section><p>API for computing bonuses granted by factors inside RecalculateStats.</p>
 </section>
+      <h4><a class="xref" href="R2API.RecalculateStatsAPI.CustomStats.html">RecalculateStatsAPI.CustomStats</a></h4>
+      <section></section>
       <h4><a class="xref" href="R2API.RecalculateStatsAPI.StatHookEventArgs.html">RecalculateStatsAPI.StatHookEventArgs</a></h4>
       <section><p>A collection of modifiers for various stats. It will be passed down the event chain of GetStatCoefficients; add to the contained values to modify stats.</p>
 </section>
@@ -280,6 +293,8 @@ Unlike regular RuleChoiceDefs, an ExtendedRulechoiceDef can have multiple requir
       <h4><a class="xref" href="R2API.SkillsAPI.html">SkillsAPI</a></h4>
       <section></section>
       <h4><a class="xref" href="R2API.SkillsPlugin.html">SkillsPlugin</a></h4>
+      <section></section>
+      <h4><a class="xref" href="R2API.SkinCustomGameobjectComponent.html">SkinCustomGameobjectComponent</a></h4>
       <section></section>
       <h4><a class="xref" href="R2API.SkinIDRS.html">SkinIDRS</a></h4>
       <section><p>Class for adding Skin Specific ItemDisplayRuleSets for skin defs.</p>
@@ -366,6 +381,9 @@ It stores the enum value as an Int64 for serialization purposes.</p>
 </section>
       <h4><a class="xref" href="R2API.LoadoutAPI.SkinDefInfo.html">LoadoutAPI.SkinDefInfo</a></h4>
       <section></section>
+      <h4><a class="xref" href="R2API.RecalculateStatsAPI.SkillSlotStatModifiers.html">RecalculateStatsAPI.SkillSlotStatModifiers</a></h4>
+      <section><p>A collection of modifiers for skill slots</p>
+</section>
       <h4><a class="xref" href="R2API.SkinDefInfo.html">SkinDefInfo</a></h4>
       <section><p>Use <a class="xref" href="R2API.SkinDefParamsInfo.html">SkinDefParamsInfo</a> instead</p>
 </section>
@@ -425,11 +443,17 @@ Enums
       <h4><a class="xref" href="R2API.DirectorAPI.Stage.html">DirectorAPI.Stage</a></h4>
       <section><p>A flags enum for the vanilla stages. Custom stages are handled with a string in StageInfo.</p>
 </section>
+      <h4><a class="xref" href="R2API.HealthBarAPI.BarOverlayIndex.html">HealthBarAPI.BarOverlayIndex</a></h4>
+      <section><p>An identifier for a modded HealthBar overlay.</p>
+</section>
       <h4><a class="xref" href="R2API.ModdedProcType.html">ModdedProcType</a></h4>
       <section><p>A modded equivalent of <span class="xref">RoR2.ProcType</span> for use with <a class="xref" href="R2API.ProcTypeAPI.html">ProcTypeAPI</a>.</p>
 </section>
       <h4><a class="xref" href="R2API.TeamsAPI.TeamClassification.html">TeamsAPI.TeamClassification</a></h4>
       <section><p>What vanilla team's behavior a modded team should be based on</p>
+</section>
+      <h4><a class="xref" href="R2API.VanillaEliteTier.html">VanillaEliteTier</a></h4>
+      <section><p>Provides a list of names that correspond to each <span class="xref">RoR2.CombatDirector.EliteTierDef</span> in the <a class="xref" href="R2API.EliteAPI.html#R2API_EliteAPI_VanillaEliteTiers">VanillaEliteTiers</a> array</p>
 </section>
     <h3 id="delegates">
 Delegates
@@ -444,6 +468,20 @@ Delegates
 </section>
       <h4><a class="xref" href="R2API.DotAPI.CustomDotVisual.html">DotAPI.CustomDotVisual</a></h4>
       <section><p>Allows custom visuals for your buff. think bleeding etc. <span class="xref">RoR2.DotController.FixedUpdate()</span></p>
+</section>
+      <h4><a class="xref" href="R2API.ExecuteAPI.CalculateAdditiveExecuteThresholdEventHandler.html">ExecuteAPI.CalculateAdditiveExecuteThresholdEventHandler</a></h4>
+      <section></section>
+      <h4><a class="xref" href="R2API.ExecuteAPI.CalculateAdditiveExecuteThresholdForViewerEventHandler.html">ExecuteAPI.CalculateAdditiveExecuteThresholdForViewerEventHandler</a></h4>
+      <section></section>
+      <h4><a class="xref" href="R2API.ExecuteAPI.CalculateExecuteThresholdEventHandler.html">ExecuteAPI.CalculateExecuteThresholdEventHandler</a></h4>
+      <section></section>
+      <h4><a class="xref" href="R2API.ExecuteAPI.CalculateExecuteThresholdForViewerEventHandler.html">ExecuteAPI.CalculateExecuteThresholdForViewerEventHandler</a></h4>
+      <section></section>
+      <h4><a class="xref" href="R2API.HealthBarAPI.BarOverlayInfo.ModifyBarInfoCallback.html">HealthBarAPI.BarOverlayInfo.ModifyBarInfoCallback</a></h4>
+      <section><p>A delegate that can be run when HealthBar overlays are updated. Use this to set things like whether your bar is enabled or its size.</p>
+</section>
+      <h4><a class="xref" href="R2API.HealthBarAPI.BarOverlayInfo.ModifyHealthValuesCallback.html">HealthBarAPI.BarOverlayInfo.ModifyHealthValuesCallback</a></h4>
+      <section><p>A delegate that can be run when HealthBar display values are being calculated. Use this to modify the numerical health values before they render on the HUD.</p>
 </section>
       <h4><a class="xref" href="R2API.RecalculateStatsAPI.StatHookEventHandler.html">RecalculateStatsAPI.StatHookEventHandler</a></h4>
       <section><p>Used as the delegate type for the GetStatCoefficients event.</p>
